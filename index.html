@@ -29,10 +29,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="contact.html">Book Now</a></li>
+
+                    <li class="nav-item">
+                        <button id="sound-toggle" class="btn btn-link nav-link" title="Toggle Sound">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="rent.html">Rent It Now</a></li>
                 </ul>
             </div>
         </div>
@@ -43,49 +51,83 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
-                    <h1>Premium Audio Solutions <br> for Your Next Event</h1>
+                    <h1>Premium Audio Solutions <br> <span>for Your Next Event</span></h1>
                     <p>From intimate weddings to large corporate conferences, Noshahi Sound System delivers
                         crystal-clear sound and professional lighting reliability.</p>
                     <a href="equipment.html" class="btn btn-primary btn-lg me-3">View Equipment</a>
                     <a href="contact.html" class="btn btn-outline-primary btn-lg">Get a Quote</a>
                 </div>
                 <div class="col-lg-6 hero-image mt-5 mt-lg-0">
-                    <img src="img/dj_setup_wide_1771139093203.png" class="img-fluid" alt="Professional Sound Setup">
+                    <img src="img/dj_setup_wide_1771139093203.png" class="img-fluid rounded shadow-lg hover-scale"
+                        alt="Professional Sound Setup">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us -->
-    <section class="py-5">
+    <section class="event-types-section py-5">
         <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Noshahi Sound?</h2>
+            <div class="section-title mb-5">
+                <h2>Why Choose <span>Noshahi Sound?</span></h2>
                 <p>We combine top-tier equipment with decades of expertise.</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <i class="fas fa-certificate feature-icon"></i>
-                        <h4>Premium Equipment</h4>
-                        <p class="text-muted">We use industry-standard brands like JBL, Yamaha, and Shure to ensure
-                            perfect audio quality.</p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Premium Equipment">
+                            <div class="event-card-badge">
+                                <i class="fas fa-certificate me-1"></i> Premium
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Premium Equipment</h4>
+                            <p class="text-muted mb-4">We use industry-standard brands like JBL, Yamaha, and Shure to
+                                ensure perfect audio quality at every event we serve.</p>
+                            <a href="equipment.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>View Equipment
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <i class="fas fa-users-cog feature-icon"></i>
-                        <h4>Expert Support</h4>
-                        <p class="text-muted">Our experienced technicians handle setup, operation, and teardown, so you
-                            can focus on your event.</p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Expert Support">
+                            <div class="event-card-badge badge-corporate">
+                                <i class="fas fa-users-cog me-1"></i> Expert
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Expert Technical Support</h4>
+                            <p class="text-muted mb-4">Our experienced technicians handle setup, operation, and
+                                teardown, so you can focus entirely on enjoying your event.</p>
+                            <a href="contact.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Contact Team
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <i class="fas fa-clock feature-icon"></i>
-                        <h4>Reliability</h4>
-                        <p class="text-muted">On time, every time. We understand that in events, timing is everything.
-                        </p>
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Reliability">
+                            <div class="event-card-badge badge-sports">
+                                <i class="fas fa-clock me-1"></i> Reliable
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Guaranteed Reliability</h4>
+                            <p class="text-muted mb-4">On time, every time. We understand that in events, timing is
+                                everything. Count on us for seamless, worry-free performances.</p>
+                            <a href="events.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Our Events
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,49 +135,94 @@
     </section>
 
     <!-- Featured Equipment Preview -->
-    <section class="py-5 section-bg-light">
+    <section class="event-types-section py-5"
+        style="background: linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Rental Fleet</h2>
+            <div class="section-title mb-5">
+                <h2>Our <span>Rental Fleet</span></h2>
                 <p>Everything you need for a successful event.</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/dj_speakers_15inch_glowing_1771138966703.png" class="card-img-top" alt="Speakers">
-                        <div class="card-body">
-                            <h5 class="card-title">PA Systems</h5>
-                            <p class="card-text text-muted">Diverse range of speakers for venues of all sizes.</p>
-                            <a href="equipment.html" class="text-danger fw-bold text-decoration-none">Learn More <i
-                                    class="fas fa-arrow-right list-inline-item ms-1"></i></a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="img/dj_speakers_15inch_glowing_1771138966703.png" class="card-img-top"
+                                alt="PA Systems">
+                            <div class="event-card-badge">
+                                <i class="fas fa-volume-up me-1"></i> Speakers
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Professional PA Systems</h4>
+                            <p class="text-muted mb-3">Diverse range of speakers for venues of all sizes. From compact
+                                monitors to full line arrays.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>15" & 18" Woofers</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Active & Passive Options
+                                </li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>High SPL Output</li>
+                            </ul>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#fleetDetailModal"
+                                data-fleet-type="pa_system">
+                                <i class="fas fa-arrow-right me-2"></i>Learn More
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/mixer_8_channel_neon_1771138986713.png" class="card-img-top" alt="Mixers">
-                        <div class="card-body">
-                            <h5 class="card-title">Mixing Consoles</h5>
-                            <p class="card-text text-muted">Digital and analog mixers for precise audio control.</p>
-                            <a href="equipment.html" class="text-danger fw-bold text-decoration-none">Learn More <i
-                                    class="fas fa-arrow-right list-inline-item ms-1"></i></a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="img/mixer_8_channel_neon_1771138986713.png" class="card-img-top"
+                                alt="Mixing Consoles">
+                            <div class="event-card-badge badge-academic">
+                                <i class="fas fa-sliders-h me-1"></i> Mixer
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Digital Mixing Consoles</h4>
+                            <p class="text-muted mb-3">Digital and analog mixers for precise audio control.
+                                Multi-channel processing with built-in effects.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>8 to 32 Channels</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Built-in Effects & EQ
+                                </li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>USB Recording</li>
+                            </ul>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#fleetDetailModal"
+                                data-fleet-type="mixing_console">
+                                <i class="fas fa-arrow-right me-2"></i>Learn More
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/neon_power_amp_1771139058129.png" class="card-img-top" alt="Amplifiers">
-                        <div class="card-body">
-                            <h5 class="card-title">Power Amps</h5>
-                            <p class="card-text text-muted">High-headroom amplifiers for distortion-free sound.</p>
-                            <a href="equipment.html" class="text-danger fw-bold text-decoration-none">Learn More <i
-                                    class="fas fa-arrow-right list-inline-item ms-1"></i></a>
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="img/neon_power_amp_1771139058129.png" class="card-img-top" alt="Power Amplifiers">
+                            <div class="event-card-badge badge-cultural">
+                                <i class="fas fa-bolt me-1"></i> Power
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">High-Power Amplifiers</h4>
+                            <p class="text-muted mb-3">High-headroom amplifiers for distortion-free sound. Clean power
+                                delivery for any speaker configuration.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>2 & 4 Channel Models</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Protection Circuits</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Rack Mountable</li>
+                            </ul>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#fleetDetailModal"
+                                data-fleet-type="power_amp">
+                                <i class="fas fa-arrow-right me-2"></i>Learn More
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="equipment.html" class="btn btn-outline-primary">View Full Inventory</a>
+                <a href="equipment.html" class="btn btn-primary btn-lg px-5 py-3"><i
+                        class="fas fa-headset me-2"></i>View Full Inventory</a>
             </div>
         </div>
     </section>
@@ -144,7 +231,7 @@
     <section class="py-5">
         <div class="container">
             <div class="section-title">
-                <h2>What Our Clients Say</h2>
+                <h2>What <span>Our Clients Say</span></h2>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -193,6 +280,7 @@
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="showcase.html">Showcase</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -200,10 +288,10 @@
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
                     <h5>Services</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Sound Rental</a></li>
-                        <li><a href="#">Lighting Setup</a></li>
-                        <li><a href="#">DJ Services</a></li>
-                        <li><a href="#">Corporate A/V</a></li>
+                        <li><a href="rent.html">Sound Rental</a></li>
+                        <li><a href="events.html">Lighting Setup</a></li>
+                        <li><a href="events.html">DJ Services</a></li>
+                        <li><a href="events.html">Corporate A/V</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4">
@@ -230,8 +318,28 @@
         </div>
     </footer>
 
+    <!-- Fleet Details Modal -->
+    <div class="modal fade" id="fleetDetailModal" tabindex="-1" aria-labelledby="fleetDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title fw-bold" id="fleetDetailModalLabel">Equipment Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="fleetDetailModalBody">
+                    <!-- Dynamic Content -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="rent.html" class="btn btn-primary">Rent Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/923281642297" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/923281642297" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 

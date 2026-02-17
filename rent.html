@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Noshahi Sound System</title>
+    <title>Rent It Now - Noshahi Sound System</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -33,8 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
                     <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item">
                         <button id="sound-toggle" class="btn btn-link nav-link" title="Toggle Sound">
                             <i class="fas fa-volume-up"></i>
@@ -46,113 +45,85 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center">
+    <!-- Header -->
+    <section class="page-hero">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 hero-content">
-                    <h1>Get <span>in Touch</span></h1>
-                    <p>We're here to answer your questions and plan your event. Contact us today for a free consultation
-                        and quote for your next event.</p>
-                    <a href="tel:+923281642297" class="btn btn-primary btn-lg">Call Us Now</a>
-                </div>
-                <div class="col-lg-6 hero-image mt-5 mt-lg-0">
-                    <img src="img/dj_speakers_15inch_glowing_1771138966703.png"
-                        class="img-fluid rounded shadow-lg hover-scale" alt="Professional Sound Equipment">
-                </div>
-            </div>
+            <h1 class="display-4 fw-bold">Rent <span>It Now</span></h1>
+            <p class="lead">Book premium audio equipment for your event instantly.</p>
         </div>
     </section>
 
-    <!-- Contact Form & Info -->
+    <!-- Rental Form -->
     <section class="py-5">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-7">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
                     <div class="card h-100 border-0 shadow-sm p-5">
-                        <h3 class="fw-bold mb-4">Send us a Message</h3>
+                        <h3 class="fw-bold mb-4">Express Booking Request</h3>
                         <form>
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label for="firstName" class="form-label text-muted small fw-bold">First
-                                        Name</label>
-                                    <input type="text" class="form-control" id="firstName">
+                                    <label for="fullName" class="form-label text-muted small fw-bold">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="lastName" class="form-label text-muted small fw-bold">Last Name</label>
-                                    <input type="text" class="form-control" id="lastName">
-                                </div>
-                                <div class="col-12">
-                                    <label for="email" class="form-label text-muted small fw-bold">Email Address</label>
-                                    <input type="email" class="form-control" id="email">
-                                </div>
-                                <div class="col-12">
                                     <label for="phone" class="form-label text-muted small fw-bold">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone">
+                                    <input type="tel" class="form-control" id="phone" required>
                                 </div>
+                                <div class="col-md-6">
+                                    <label for="eventDate" class="form-label text-muted small fw-bold">Event
+                                        Date</label>
+                                    <input type="date" class="form-control" id="eventDate" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="eventLocation" class="form-label text-muted small fw-bold">Event
+                                        Location (City/Area)</label>
+                                    <input type="text" class="form-control" id="eventLocation" required>
+                                </div>
+
                                 <div class="col-12">
-                                    <label for="eventType" class="form-label text-muted small fw-bold">Event
-                                        Type</label>
+                                    <label class="form-label text-muted small fw-bold">Event Type</label>
                                     <select class="form-select" id="eventType">
                                         <option selected>Select Event Type...</option>
-                                        <option value="wedding">Wedding</option>
+                                        <option value="wedding">Wedding / Walima</option>
+                                        <option value="birthday">Birthday Party</option>
+                                        <option value="get_together">Get Together</option>
+                                        <option value="naat">Mehfil-e-Naat</option>
                                         <option value="corporate">Corporate Event</option>
-                                        <option value="concert">Concert / Live Music</option>
                                         <option value="other">Other</option>
                                     </select>
                                 </div>
+
                                 <div class="col-12">
-                                    <label for="message" class="form-label text-muted small fw-bold">Additional
-                                        Details</label>
-                                    <textarea class="form-control" id="message" rows="4"></textarea>
+                                    <label class="form-label text-muted small fw-bold">Equipment Needed
+                                        (Optional)</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="pa_system" id="checkPA">
+                                        <label class="form-check-label" for="checkPA">Full PA System</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="dj_gear" id="checkDJ">
+                                        <label class="form-check-label" for="checkDJ">DJ Gear & Lighting</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="mics" id="checkMics">
+                                        <label class="form-check-label" for="checkMics">Wireless Microphones</label>
+                                    </div>
                                 </div>
+
+                                <div class="col-12">
+                                    <label for="details" class="form-label text-muted small fw-bold">Additional
+                                        Details</label>
+                                    <textarea class="form-control" id="details" rows="3"
+                                        placeholder="Tell us more about your requirements..."></textarea>
+                                </div>
+
                                 <div class="col-12 mt-4">
-                                    <button type="button" class="btn btn-cta w-100">Submit Inquiry</button>
+                                    <button type="button" class="btn btn-cta w-100 btn-lg">Submit Booking
+                                        Request</button>
                                 </div>
                             </div>
                         </form>
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="h-100 ps-lg-4">
-                        <div class="mb-5">
-                            <h4 class="fw-bold mb-4">Contact Information</h4>
-                            <div class="d-flex mb-4">
-                                <div class="me-3"><i class="fas fa-map-marker-alt fa-lg text-danger"></i></div>
-                                <div>
-                                    <h6 class="fw-bold mb-1">Our Location</h6>
-                                    <p class="text-muted">Village 97 JB, Gojra<br>Punjab, Pakistan</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-4">
-                                <div class="me-3"><i class="fas fa-phone-alt fa-lg text-danger"></i></div>
-                                <div>
-                                    <h6 class="fw-bold mb-1">Phone Support</h6>
-                                    <p class="text-muted mb-0">0328-1642297 (Adeel Noshahi)</p>
-                                    <p class="text-muted">0302-7689195 (Booking Manager)</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-4">
-                                <div class="me-3"><i class="fas fa-envelope fa-lg text-danger"></i></div>
-                                <div>
-                                    <h6 class="fw-bold mb-1">Email Us</h6>
-                                    <p class="text-muted">info@noshahisound.com</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card border-0 shadow-sm p-4 bg-light">
-                            <h5 class="fw-bold mb-3">Office Hours</h5>
-                            <p class="text-muted mb-2 d-flex justify-content-between"><span>Monday - Friday:</span>
-                                <span>9:00 AM - 6:00 PM</span>
-                            </p>
-                            <p class="text-muted mb-2 d-flex justify-content-between"><span>Saturday:</span> <span>10:00
-                                    AM - 4:00 PM</span></p>
-                            <p class="text-muted mb-0 d-flex justify-content-between"><span>Sunday:</span>
-                                <span>Closed</span>
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -172,6 +143,7 @@
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
                         <li><a href="equipment.html">Equipment</a></li>
                         <li><a href="showcase.html">Showcase</a></li>
                         <li><a href="about.html">About Us</a></li>

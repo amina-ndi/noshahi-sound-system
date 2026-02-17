@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Noshahi Sound System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">NOSHAHI SOUND</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <button id="sound-toggle" class="btn btn-link nav-link" title="Toggle Sound">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="rent.html">Rent It Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1>Perfect Sound <span>for Every Occasion</span></h1>
+                    <p>Tailored audio solutions for all your special moments. From weddings to corporate events, we
+                        provide the perfect sound setup for every celebration.</p>
+                    <a href="rent.html" class="btn btn-primary btn-lg">Book Your Event</a>
+                </div>
+                <div class="col-lg-6 hero-image mt-5 mt-lg-0">
+                    <img src="img/neon_power_amp_1771139058129.png" class="img-fluid rounded shadow-lg hover-scale"
+                        alt="Event Sound System">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Types -->
+    <section class="event-types-section py-5">
+        <div class="container">
+            <div class="section-title mb-5">
+                <h2>Our <span>Event Solutions</span></h2>
+                <p>Premium sound & lighting packages tailored for every occasion</p>
+            </div>
+            <div class="row g-4">
+                <!-- Grand Wedding Celebrations -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Wedding Celebrations">
+                            <div class="event-card-badge">
+                                <i class="fas fa-ring me-1"></i> Premium
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Grand Wedding Celebrations</h4>
+                            <p class="text-muted mb-4">Experience the magic of your special day with crystal-clear
+                                audio. We provide comprehensive sound solutions for vows, speeches, and music, ensuring
+                                every guest hears every emotion.</p>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#eventDetailModal"
+                                data-event-type="wedding">
+                                <i class="fas fa-arrow-right me-2"></i>Explore Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Birthday Extravaganza -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Birthday Celebrations">
+                            <div class="event-card-badge">
+                                <i class="fas fa-birthday-cake me-1"></i> Popular
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Birthday Extravaganza</h4>
+                            <p class="text-muted mb-4">Turn up the excitement with our punchy sound systems perfect for
+                                high-energy parties. DJ-ready setups, vibrant lighting, and bass-heavy speakers to keep
+                                the dance floor alive.</p>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#eventDetailModal"
+                                data-event-type="birthday">
+                                <i class="fas fa-arrow-right me-2"></i>Explore Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Reunion Gatherings -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Family Gatherings">
+                            <div class="event-card-badge">
+                                <i class="fas fa-users me-1"></i> Classic
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Family Reunion Gatherings</h4>
+                            <p class="text-muted mb-4">Create the perfect ambiance for family reunions and casual
+                                gatherings. Warm, balanced background music and clear speech for announcements in a
+                                comfortable environment.</p>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#eventDetailModal"
+                                data-event-type="gettogether">
+                                <i class="fas fa-arrow-right me-2"></i>Explore Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sacred Mehfil-e-Naat -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Mehfil-e-Naat">
+                            <div class="event-card-badge badge-spiritual">
+                                <i class="fas fa-mosque me-1"></i> Spiritual
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Sacred Mehfil-e-Naat</h4>
+                            <p class="text-muted mb-4">Enhance the spiritual atmosphere with specialized audio
+                                configurations. Professional echo and reverb effects tailored for Naat recitations,
+                                ensuring pristine, resonant vocals.</p>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#eventDetailModal"
+                                data-event-type="naat">
+                                <i class="fas fa-arrow-right me-2"></i>Explore Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Royal Walima Reception -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Walima Reception">
+                            <div class="event-card-badge">
+                                <i class="fas fa-glass-cheers me-1"></i> Elegant
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Royal Walima Reception</h4>
+                            <p class="text-muted mb-4">Sophistication meets performance. Soothing background audio
+                                during dining and crisp clarity for stage proceedings — a seamless experience that
+                                complements your reception's grandeur.</p>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#eventDetailModal"
+                                data-event-type="walima">
+                                <i class="fas fa-arrow-right me-2"></i>Explore Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate & Business Events -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Corporate Events">
+                            <div class="event-card-badge badge-corporate">
+                                <i class="fas fa-briefcase me-1"></i> Business
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Corporate & Business Events</h4>
+                            <p class="text-muted mb-4">Professional reliability for your business events. From panel
+                                discussions to product launches, we guarantee glitch-free performance with on-site
+                                technical support.</p>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#eventDetailModal"
+                                data-event-type="corporate">
+                                <i class="fas fa-arrow-right me-2"></i>Explore Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School & Academic Programs -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="School Programs">
+                            <div class="event-card-badge badge-academic">
+                                <i class="fas fa-graduation-cap me-1"></i> Academic
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">School & Academic Programs</h4>
+                            <p class="text-muted mb-4">High-quality sound for school functions, annual days, prize
+                                distributions, and educational seminars. Clear audio for speeches, performances, and
+                                announcements across large venues.</p>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#eventDetailModal"
+                                data-event-type="school">
+                                <i class="fas fa-arrow-right me-2"></i>Explore Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Traditional Qawwali Night -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Qawwali Night">
+                            <div class="event-card-badge badge-cultural">
+                                <i class="fas fa-music me-1"></i> Cultural
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Traditional Qawwali Night</h4>
+                            <p class="text-muted mb-4">Immersive audio setup for soulful Qawwali performances. Powerful
+                                bass, rich mid-range, and crystal-clear highs to capture every nuance of harmonium,
+                                tabla, and vocal artistry.</p>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#eventDetailModal"
+                                data-event-type="qawwali">
+                                <i class="fas fa-arrow-right me-2"></i>Explore Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports & Tournament Events -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Sports Events">
+                            <div class="event-card-badge badge-sports">
+                                <i class="fas fa-trophy me-1"></i> Sports
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Sports & Tournament Events</h4>
+                            <p class="text-muted mb-4">Stadium-grade sound for sports tournaments, cricket matches, and
+                                athletic events. Powerful announcements, commentary systems, and crowd-energizing music
+                                setups for large outdoor venues.</p>
+                            <button class="btn btn-event-cta" data-bs-toggle="modal" data-bs-target="#eventDetailModal"
+                                data-event-type="sports">
+                                <i class="fas fa-arrow-right me-2"></i>Explore Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="rent.html" class="btn btn-primary btn-lg px-5 py-3"><i
+                        class="fas fa-calendar-check me-2"></i>Book Your Event Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold text-white mb-4">NOSHAHI SOUND</h5>
+                    <p class="text-secondary small">Your trusted partner for professional audio and lighting solutions
+                        in Gojra and beyond.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="showcase.html">Showcase</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="rent.html">Sound Rental</a></li>
+                        <li><a href="events.html">Lighting Setup</a></li>
+                        <li><a href="events.html">DJ Services</a></li>
+                        <li><a href="events.html">Corporate A/V</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Village 97 JB, Gojra</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> 0328-1642297 (Adeel Noshahi)</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@noshahisound.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0 small">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Event Details Modal -->
+    <div class="modal fade" id="eventDetailModal" tabindex="-1" aria-labelledby="eventDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title fw-bold" id="eventDetailModalLabel">Package Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="eventDetailModalBody">
+                    <!-- Dynamic Content -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="rent.html" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923281642297" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

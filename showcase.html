@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Us In Action - Noshahi Sound System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">NOSHAHI SOUND</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="showcase.html">Showcase</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                    <li class="nav-item">
+                        <button id="sound-toggle" class="btn btn-link nav-link" title="Toggle Sound">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="rent.html">Rent It Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Video Hero Section -->
+    <section class="video-hero-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5 hero-text-content">
+                        <h1 class="display-3 fw-bold mb-4">Watch Our <span>Sound System</span> in Action</h1>
+                        <p class="lead text-muted mb-5">See why clients across Pakistan trust Noshahi Sound System for
+                            their most important events</p>
+                    </div>
+
+                    <!-- Video Container -->
+                    <div class="video-container shadow-lg">
+                        <div class="video-wrapper">
+                            <video id="showcaseVideo" controls poster="img/dj_setup_wide_1771139093203.png"
+                                class="w-100">
+                                <source src="videos/sound-system-demo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- Video Overlay for placeholder -->
+                            <div class="video-overlay" id="videoOverlay">
+                                <div class="play-button-wrapper">
+                                    <button class="play-button" id="playButton">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <p class="text-white mt-4 fs-5 fw-bold">Watch Our Professional Setup in Action</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-check stat-icon"></i>
+                        <h2 class="stat-number" data-count="500">0</h2>
+                        <p class="stat-label">Events Completed</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="fas fa-smile stat-icon"></i>
+                        <h2 class="stat-number" data-count="450">0</h2>
+                        <p class="stat-label">Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="fas fa-clock stat-icon"></i>
+                        <h2 class="stat-number" data-count="100">0</h2>
+                        <p class="stat-label">% On-Time Delivery</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="fas fa-award stat-icon"></i>
+                        <h2 class="stat-number" data-count="10">0</h2>
+                        <p class="stat-label">Years of Excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us - Enhanced -->
+    <section class="py-5 section-bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Clients Choose <span>Noshahi Sound System</span></h2>
+                <p>We don't just rent equipment - we deliver complete audio experiences</p>
+            </div>
+            <div class="row g-4">
+                <!-- Best Quality -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="motivation-card h-100">
+                        <div class="motivation-icon-wrapper">
+                            <i class="fas fa-gem motivation-icon"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">Premium Quality Equipment</h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle me-2"></i>JBL, Yamaha & Shure brands</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Latest models & technology</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Regular maintenance & testing</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Crystal clear sound output</li>
+                        </ul>
+                        <div class="quality-badge">
+                            <span class="badge-text">TOP TIER</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Pricing -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="motivation-card h-100 featured-card">
+                        <div class="best-value-ribbon">BEST VALUE</div>
+                        <div class="motivation-icon-wrapper">
+                            <i class="fas fa-tags motivation-icon"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">Competitive Pricing</h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle me-2"></i>Affordable rental packages</li>
+                            <li><i class="fas fa-check-circle me-2"></i>No hidden charges</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Flexible payment options</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Discount on bulk bookings</li>
+                        </ul>
+                        <div class="quality-badge pricing-badge">
+                            <span class="badge-text">💰 BEST PRICE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timely Service -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="motivation-card h-100">
+                        <div class="motivation-icon-wrapper">
+                            <i class="fas fa-bolt motivation-icon"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">Always On Time</h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle me-2"></i>Guaranteed punctual setup</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Professional technicians</li>
+                            <li><i class="fas fa-check-circle me-2"></i>24/7 technical support</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Quick issue resolution</li>
+                        </ul>
+                        <div class="quality-badge">
+                            <span class="badge-text">⚡ RELIABLE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Team -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="motivation-card h-100">
+                        <div class="motivation-icon-wrapper">
+                            <i class="fas fa-users-cog motivation-icon"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">Expert Support Team</h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle me-2"></i>Experienced audio engineers</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Complete setup & teardown</li>
+                            <li><i class="fas fa-check-circle me-2"></i>On-site technical assistance</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Sound optimization expertise</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Complete Package -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="motivation-card h-100">
+                        <div class="motivation-icon-wrapper">
+                            <i class="fas fa-box-open motivation-icon"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">All-In-One Solution</h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle me-2"></i>Sound + lighting packages</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Microphones & DJ equipment</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Backup equipment available</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Customizable packages</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Trust & Reputation -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="motivation-card h-100">
+                        <div class="motivation-icon-wrapper">
+                            <i class="fas fa-shield-alt motivation-icon"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">Trusted by Hundreds</h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle me-2"></i>10+ years in business</li>
+                            <li><i class="fas fa-check-circle me-2"></i>500+ successful events</li>
+                            <li><i class="fas fa-check-circle me-2"></i>5-star customer reviews</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Insurance coverage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Highlight Section -->
+    <section class="py-5 pricing-highlight-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="display-4 fw-bold mb-4">Unbeatable <span>Pricing</span></h2>
+                    <p class="lead mb-4">Get premium quality sound systems at prices that fit your budget. No
+                        compromises, no hidden fees.</p>
+                    <div class="pricing-features">
+                        <div class="pricing-feature-item">
+                            <i class="fas fa-money-bill-wave text-success fs-3 me-3"></i>
+                            <div>
+                                <h5 class="mb-1">Transparent Pricing</h5>
+                                <p class="text-muted mb-0">What you see is what you pay - no surprises</p>
+                            </div>
+                        </div>
+                        <div class="pricing-feature-item">
+                            <i class="fas fa-percentage text-success fs-3 me-3"></i>
+                            <div>
+                                <h5 class="mb-1">Special Discounts</h5>
+                                <p class="text-muted mb-0">Save more on multiple bookings & long events</p>
+                            </div>
+                        </div>
+                        <div class="pricing-feature-item">
+                            <i class="fas fa-hand-holding-usd text-success fs-3 me-3"></i>
+                            <div>
+                                <h5 class="mb-1">Flexible Payment</h5>
+                                <p class="text-muted mb-0">Easy payment plans available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pricing-card-special">
+                        <div class="special-offer-badge">LIMITED TIME OFFER</div>
+                        <h3 class="text-center mb-4">Get Started Today</h3>
+                        <div class="price-display">
+                            <span class="currency">PKR</span>
+                            <span class="amount">Contact Us</span>
+                            <span class="period">for Best Quote</span>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check text-success me-2"></i>Professional PA System</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Expert Setup & Teardown</li>
+                            <li><i class="fas fa-check text-success me-2"></i>On-Site Technical Support</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Quality Guarantee</li>
+                        </ul>
+                        <a href="rent.html" class="btn btn-primary btn-lg w-100 mt-4">Get Your Quote Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 section-bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our <span>Clients Say</span></h2>
+                <p>Don't just take our word for it - hear from satisfied customers</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Outstanding service! The sound quality was perfect for our wedding.
+                            The team was professional and punctual. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah & Ahmed</strong>
+                            <span class="text-muted d-block">Wedding Reception</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Best sound system rental in the area. Great equipment, competitive
+                            pricing, and excellent customer service. Will use again!"</p>
+                        <div class="testimonial-author">
+                            <strong>Tech Solutions Ltd.</strong>
+                            <span class="text-muted d-block">Corporate Event</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Noshahi Sound System made our concert a huge success. The audio
+                            quality was crystal clear and the team handled everything professionally."</p>
+                        <div class="testimonial-author">
+                            <strong>Ali Raza</strong>
+                            <span class="text-muted d-block">Music Concert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strong CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2 class="display-4 text-white fw-bold mb-4">Ready to Make Your Event Unforgettable?</h2>
+                <p class="lead text-white mb-5">Join hundreds of satisfied clients who trusted Noshahi Sound System for
+                    their special moments</p>
+                <div class="cta-buttons">
+                    <a href="rent.html" class="btn btn-light btn-lg me-3 px-5 py-3">
+                        <i class="fas fa-calendar-check me-2"></i>Book Now
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg px-5 py-3">
+                        <i class="fas fa-phone me-2"></i>Call Us Today
+                    </a>
+                </div>
+                <p class="text-white mt-4 mb-0">
+                    <i class="fas fa-phone-alt me-2"></i>
+                    <strong>03281642297</strong> - Available 24/7
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold text-white mb-4">NOSHAHI SOUND</h5>
+                    <p class="text-secondary small">Your trusted partner for professional audio and lighting solutions
+                        in Gojra and beyond.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="showcase.html">Showcase</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="rent.html">Sound Rental</a></li>
+                        <li><a href="events.html">Lighting Setup</a></li>
+                        <li><a href="events.html">DJ Services</a></li>
+                        <li><a href="events.html">Corporate A/V</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Village 97 JB, Gojra</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> 0328-1642297 (Adeel Noshahi)</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@noshahisound.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0 small">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923281642297" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="showcase.js"></script>
+</body>
+
+</html>

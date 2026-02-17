@@ -29,46 +29,112 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="contact.html">Book Now</a></li>
+
+                    <li class="nav-item">
+                        <button id="sound-toggle" class="btn btn-link nav-link" title="Toggle Sound">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="rent.html">Rent It Now</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="section-bg-light py-5 mt-5 text-center">
-        <div class="container pt-5">
-            <h1 class="display-4 fw-bold mb-3">Our Story</h1>
-            <p class="lead text-muted">Dedicated to sonic excellence since our inception.</p>
-        </div>
-    </header>
-
-    <!-- Mission & History -->
-    <section class="py-5">
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
         <div class="container">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6">
-                    <h3 class="fw-bold text-danger mb-3">Our Mission</h3>
-                    <p class="text-muted">At Noshahi Sound System, our mission is simple: to provide flawless audio
-                        experiences that elevate every event. We believe that clear sound is the foundation of
-                        successful communication and entertainment.</p>
-                    <p class="text-muted">Whether it's a religious gathering, a wedding celebration, or a corporate
-                        seminar, we approach every project with the same level of dedication and professionalism.</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1>Our <span>Story</span></h1>
+                    <p>Dedicated to sonic excellence since our inception. We combine years of experience with
+                        cutting-edge equipment to deliver unforgettable audio experiences.</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Get in Touch</a>
                 </div>
-                <div class="col-lg-6">
-                    <div class="p-5 bg-light rounded text-center border">
-                        <i class="fas fa-quote-left fa-3x text-secondary mb-3"></i>
-                        <figure>
-                            <blockquote class="blockquote">
-                                <p>"Sound is not just about volume; it's about clarity, impact, and emotion."</p>
-                            </blockquote>
-                            <figcaption class="blockquote-footer mt-2">
-                                Adeel Noshahi <cite title="Source Title">Director</cite>
-                            </figcaption>
-                        </figure>
+                <div class="col-lg-6 hero-image mt-5 mt-lg-0">
+                    <img src="img/dj_setup_wide_1771139093203.png" class="img-fluid rounded shadow-lg hover-scale"
+                        alt="Professional Sound Setup">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="event-types-section py-5">
+        <div class="container">
+            <div class="section-title mb-5">
+                <h2>Our <span>Mission & Values</span></h2>
+                <p>Driven by passion, powered by professionalism.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Our Mission">
+                            <div class="event-card-badge">
+                                <i class="fas fa-bullseye me-1"></i> Mission
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Crystal-Clear Audio</h4>
+                            <p class="text-muted mb-4">To provide flawless audio experiences that elevate every event.
+                                We believe that clear sound is the foundation of successful communication and
+                                entertainment.</p>
+                            <a href="events.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>View Events
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Our Dedication">
+                            <div class="event-card-badge badge-corporate">
+                                <i class="fas fa-hand-holding-heart me-1"></i> Dedication
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Unwavering Dedication</h4>
+                            <p class="text-muted mb-4">Whether it's a religious gathering, a wedding celebration, or a
+                                corporate seminar, we approach every project with the same level of dedication and
+                                professionalism.</p>
+                            <a href="equipment.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Our Equipment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper"
+                            style="background: linear-gradient(135deg, var(--bg-light), #fff); display: flex; align-items: center; justify-content: center;">
+                            <div class="text-center p-4" style="z-index: 1;">
+                                <i class="fas fa-quote-left fa-3x mb-3"
+                                    style="color: var(--primary-color); opacity: 0.3;"></i>
+                                <p class="fw-bold fs-5 px-3 mb-0" style="color: var(--text-dark); line-height: 1.6;">
+                                    "Sound is not just about volume; it's about clarity, impact, and emotion."</p>
+                            </div>
+                            <div class="event-card-badge badge-cultural">
+                                <i class="fas fa-star me-1"></i> Philosophy
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Our Philosophy</h4>
+                            <p class="text-muted mb-2">— Adeel Noshahi, Director</p>
+                            <p class="text-muted mb-4">A founding belief that drives every decision we make and every
+                                event we power.</p>
+                            <a href="contact.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Get in Touch
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,70 +142,87 @@
     </section>
 
     <!-- Leadership Team -->
-    <section class="py-5 section-bg-light">
+    <section class="event-types-section py-5"
+        style="background: linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);">
         <div class="container">
-            <div class="section-title">
-                <h2>Leadership Team</h2>
+            <div class="section-title mb-5">
+                <h2>Leadership <span>Team</span></h2>
                 <p>The experts behind every successful event.</p>
             </div>
             <div class="row g-4 justify-content-center">
                 <!-- Team Member 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 text-center border-0 shadow-sm">
-                        <div class="card-body py-5">
-                            <div class="mb-4">
-                                <img src="https://ui-avatars.com/api/?name=Adeel+Noshahi&background=FF0051&color=fff&size=128"
-                                    class="rounded-circle shadow-sm" alt="Adeel Noshahi">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper"
+                            style="background: linear-gradient(135deg, #FF0051, #990033); display: flex; align-items: center; justify-content: center;">
+                            <img src="https://ui-avatars.com/api/?name=Adeel+Noshahi&background=FF0051&color=fff&size=128"
+                                class="rounded-circle shadow-lg" alt="Adeel Noshahi"
+                                style="width: 120px; height: 120px; object-fit: cover; position: relative; z-index: 1; border: 4px solid rgba(255,255,255,0.3);">
+                            <div class="event-card-badge">
+                                <i class="fas fa-crown me-1"></i> Director
                             </div>
-                            <h4 class="fw-bold">Adeel Noshahi</h4>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Adeel Noshahi</h4>
                             <p class="text-danger fw-bold small text-uppercase mb-3">Director / Head</p>
-                            <p class="text-muted small px-3">Leading the vision of Noshahi Sound with a focus on
-                                innovation and customer satisfaction.</p>
-                            <div class="mt-4">
-                                <a href="tel:03281642297"
-                                    class="btn btn-outline-dark btn-sm rounded-pill px-4">Contact</a>
-                            </div>
+                            <p class="text-muted mb-4">Leading the vision of Noshahi Sound with a focus on innovation
+                                and customer satisfaction.</p>
+                            <a href="tel:03281642297" class="btn btn-event-cta">
+                                <i class="fas fa-phone me-2"></i>Contact
+                            </a>
                         </div>
                     </div>
                 </div>
                 <!-- Team Member 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100 text-center border-0 shadow-sm">
-                        <div class="card-body py-5">
-                            <div class="mb-4">
-                                <img src="https://ui-avatars.com/api/?name=Shakeel+Ahmad&background=990033&color=fff&size=128"
-                                    class="rounded-circle shadow-sm" alt="Shakeel Ahmad Qadri">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper"
+                            style="background: linear-gradient(135deg, #990033, #660022); display: flex; align-items: center; justify-content: center;">
+                            <img src="https://ui-avatars.com/api/?name=Shakeel+Ahmad&background=990033&color=fff&size=128"
+                                class="rounded-circle shadow-lg" alt="Shakeel Ahmad Qadri"
+                                style="width: 120px; height: 120px; object-fit: cover; position: relative; z-index: 1; border: 4px solid rgba(255,255,255,0.3);">
+                            <div class="event-card-badge badge-corporate">
+                                <i class="fas fa-calendar-check me-1"></i> Manager
                             </div>
-                            <h4 class="fw-bold">Shakeel Ahmad Qadri</h4>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Shakeel Ahmad Qadri</h4>
                             <p class="text-danger fw-bold small text-uppercase mb-3">Booking Manager</p>
-                            <p class="text-muted small px-3">Ensuring smooth scheduling and client coordination for all
-                                our engagements.</p>
-                            <div class="mt-4">
-                                <a href="tel:03027689195"
-                                    class="btn btn-outline-dark btn-sm rounded-pill px-4">Contact</a>
-                            </div>
+                            <p class="text-muted mb-4">Ensuring smooth scheduling and client coordination for all our
+                                engagements.</p>
+                            <a href="tel:03027689195" class="btn btn-event-cta">
+                                <i class="fas fa-phone me-2"></i>Contact
+                            </a>
                         </div>
                     </div>
                 </div>
                 <!-- Team Member 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100 text-center border-0 shadow-sm">
-                        <div class="card-body py-5">
-                            <div class="mb-4">
-                                <img src="https://ui-avatars.com/api/?name=Shabbir+Attari&background=333&color=fff&size=128"
-                                    class="rounded-circle shadow-sm" alt="Shabbir Attari">
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper"
+                            style="background: linear-gradient(135deg, #333, #1a1a1a); display: flex; align-items: center; justify-content: center;">
+                            <img src="https://ui-avatars.com/api/?name=Shabbir+Attari&background=333&color=fff&size=128"
+                                class="rounded-circle shadow-lg" alt="Shabbir Attari"
+                                style="width: 120px; height: 120px; object-fit: cover; position: relative; z-index: 1; border: 4px solid rgba(255,255,255,0.3);">
+                            <div class="event-card-badge badge-sports">
+                                <i class="fas fa-headphones me-1"></i> Operator
                             </div>
-                            <h4 class="fw-bold">Shabbir Attari</h4>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Shabbir Attari</h4>
                             <p class="text-danger fw-bold small text-uppercase mb-3">Sound Operator</p>
-                            <p class="text-muted small px-3">Technical expert responsible for on-site audio mixing and
-                                system optimization.</p>
-                            <div class="mt-4">
-                                <a href="tel:03281324297"
-                                    class="btn btn-outline-dark btn-sm rounded-pill px-4">Contact</a>
-                            </div>
+                            <p class="text-muted mb-4">Technical expert responsible for on-site audio mixing and system
+                                optimization.</p>
+                            <a href="tel:03281324297" class="btn btn-event-cta">
+                                <i class="fas fa-phone me-2"></i>Contact
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3"><i
+                        class="fas fa-envelope me-2"></i>Contact Our Team</a>
             </div>
         </div>
     </section>
@@ -158,6 +241,7 @@
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="showcase.html">Showcase</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -165,10 +249,10 @@
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
                     <h5>Services</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Sound Rental</a></li>
-                        <li><a href="#">Lighting Setup</a></li>
-                        <li><a href="#">DJ Services</a></li>
-                        <li><a href="#">Corporate A/V</a></li>
+                        <li><a href="rent.html">Sound Rental</a></li>
+                        <li><a href="events.html">Lighting Setup</a></li>
+                        <li><a href="events.html">DJ Services</a></li>
+                        <li><a href="events.html">Corporate A/V</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4">
@@ -196,7 +280,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/923281642297" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/923281642297" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
