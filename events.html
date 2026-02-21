@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.jpeg" type="image/jpeg">
     <title>Events - Noshahi Sound System</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,23 +21,38 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">NOSHAHI SOUND</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="img/logo.jpeg" alt="Noshahi Sound System" class="navbar-logo me-2">
+                <span>Noshahi</span> Sound System
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sound-setup.html">Sound Setup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
                     <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item">
                         <button id="sound-toggle" class="btn btn-link nav-link" title="Toggle Sound">
                             <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="lang-toggle" title="Switch Language">
+                            <i class="fas fa-globe lang-icon"></i>
+                            <span class="lang-label">اردو</span>
                         </button>
                     </li>
                     <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="rent.html">Rent It Now</a></li>
@@ -46,18 +62,20 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 hero-content">
-                    <h1>Perfect Sound <span>for Every Occasion</span></h1>
-                    <p>Tailored audio solutions for all your special moments. From weddings to corporate events, we
-                        provide the perfect sound setup for every celebration.</p>
-                    <a href="rent.html" class="btn btn-primary btn-lg">Book Your Event</a>
-                </div>
-                <div class="col-lg-6 hero-image mt-5 mt-lg-0">
-                    <img src="img/neon_power_amp_1771139058129.png" class="img-fluid rounded shadow-lg hover-scale"
-                        alt="Event Sound System">
+    <section
+        class="hero-section hero-events d-flex align-items-center justify-content-center text-center position-relative">
+        <div class="container position-relative z-2">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-3 fw-bold text-white mb-4">Perfect Sound <br> <span>for Every
+                            Occasion</span></h1>
+                    <p class="lead text-white mb-5 animate-fade-up delay-200">Tailored audio solutions for all your
+                        special moments. From weddings to corporate events, we provide the perfect sound setup for every
+                        celebration.</p>
+                    <div class="d-flex justify-content-center gap-3 animate-fade-up delay-400">
+                        <a href="rent.html" class="btn btn-primary btn-lg">Book Your Event</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,8 +93,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Wedding Celebrations">
+                            <img src="img/wedding.jpg" class="card-img-top" alt="Wedding Celebrations">
                             <div class="event-card-badge">
                                 <i class="fas fa-ring me-1"></i> Premium
                             </div>
@@ -98,8 +115,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Birthday Celebrations">
+                            <img src="img/birthday.jpg" class="card-img-top" alt="Birthday Celebrations">
                             <div class="event-card-badge">
                                 <i class="fas fa-birthday-cake me-1"></i> Popular
                             </div>
@@ -121,8 +137,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Family Gatherings">
+                            <img src="img/femily.jpg" class="card-img-top" alt="Family Gatherings">
                             <div class="event-card-badge">
                                 <i class="fas fa-users me-1"></i> Classic
                             </div>
@@ -144,8 +159,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Mehfil-e-Naat">
+                            <img src="img/mehfil e naat.jpg" class="card-img-top" alt="Mehfil-e-Naat">
                             <div class="event-card-badge badge-spiritual">
                                 <i class="fas fa-mosque me-1"></i> Spiritual
                             </div>
@@ -167,8 +181,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Walima Reception">
+                            <img src="img/wedding.jpg" class="card-img-top" alt="Walima Reception">
                             <div class="event-card-badge">
                                 <i class="fas fa-glass-cheers me-1"></i> Elegant
                             </div>
@@ -190,8 +203,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Corporate Events">
+                            <img src="img/buisness.jpg" class="card-img-top" alt="Corporate Events">
                             <div class="event-card-badge badge-corporate">
                                 <i class="fas fa-briefcase me-1"></i> Business
                             </div>
@@ -213,7 +225,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop"
+                            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&h=500&fit=crop&q=80"
                                 class="card-img-top" alt="School Programs">
                             <div class="event-card-badge badge-academic">
                                 <i class="fas fa-graduation-cap me-1"></i> Academic
@@ -236,8 +248,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Qawwali Night">
+                            <img src="img/qawwali.jpg" class="card-img-top" alt="Qawwali Night">
                             <div class="event-card-badge badge-cultural">
                                 <i class="fas fa-music me-1"></i> Cultural
                             </div>
@@ -259,8 +270,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Sports Events">
+                            <img src="img/sport.jpg" class="card-img-top" alt="Sports Events">
                             <div class="event-card-badge badge-sports">
                                 <i class="fas fa-trophy me-1"></i> Sports
                             </div>
@@ -291,23 +301,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold text-white mb-4">NOSHAHI SOUND</h5>
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="img/logo.jpeg" alt="Noshahi Sound System" class="footer-logo-brand me-3">
+                        <h5 class="fw-bold text-white mb-0 text-nowrap">Noshahi Sound System</h5>
+                    </div>
                     <p class="text-secondary small">Your trusted partner for professional audio and lighting solutions
-                        in Gojra and beyond.</p>
+                        in Gojra and beyond. Crystal clear sound for every occasion.</p>
+                    <div class="social-links mt-4">
+                        <a href="https://facebook.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/noshahisound" target="_blank" class="me-3"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/923281642297" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                    <h5>Quick Links</h5>
+                    <h5 class="fw-bold text-white mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="sound-setup.html">Sound Setup</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="showcase.html">Showcase</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                    <h5>Services</h5>
+                    <h5 class="fw-bold text-white mb-4">Services</h5>
                     <ul class="list-unstyled">
                         <li><a href="rent.html">Sound Rental</a></li>
                         <li><a href="events.html">Lighting Setup</a></li>
@@ -316,23 +338,30 @@
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <h5>Contact Us</h5>
-                    <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Village 97 JB, Gojra</li>
-                        <li class="mb-2"><i class="fas fa-phone me-2"></i> 0328-1642297 (Adeel Noshahi)</li>
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@noshahisound.com</li>
-                    </ul>
+                    <h5 class="fw-bold text-white mb-4">Contact Us</h5>
+                    <a href="https://www.google.com/maps/search/97+JB+Gojra" target="_blank"
+                        class="footer-contact-item mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="text-secondary small">Village 97 JB, Gojra</span>
+                    </a>
+                    <a href="tel:+923281642297" class="footer-contact-item mb-3">
+                        <i class="fas fa-phone"></i>
+                        <span class="text-secondary small">0328-1642297 (Adeel Noshahi)</span>
+                    </a>
+                    <a href="mailto:info@noshahisound.com" class="footer-contact-item mb-3">
+                        <i class="fas fa-envelope"></i>
+                        <span class="text-secondary small">info@noshahisound.com</span>
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom mt-5 pt-4 ">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start">
-                        <p class="mb-0 small">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
+                        <p class="mb-0 small text-secondary">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                        <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                        <p class="mb-0 small text-secondary">Designed with <i class="fas fa-heart text-danger"></i> in
+                            Gojra</p>
                     </div>
                 </div>
             </div>
@@ -367,6 +396,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="translations.js"></script>
 </body>
 
 </html>

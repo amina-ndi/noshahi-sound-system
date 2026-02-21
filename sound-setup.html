@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.jpeg" type="image/jpeg">
+    <title>Sound Setup - Noshahi Sound System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="img/logo.jpeg" alt="Noshahi Sound System" class="navbar-logo me-2">
+                <span>Noshahi</span> Sound System
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sound-setup.html">Sound Setup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                    <li class="nav-item">
+                        <button id="sound-toggle" class="btn btn-link nav-link" title="Toggle Sound">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="lang-toggle" title="Switch Language">
+                            <i class="fas fa-globe lang-icon"></i>
+                            <span class="lang-label">اردو</span>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="rent.html">Rent It Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="hero-section hero-events d-flex align-items-center justify-content-center text-center position-relative">
+        <div class="container position-relative z-2">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-3 fw-bold text-white mb-4">Our <span>Sound Setup</span></h1>
+                    <p class="lead text-white mb-5 animate-fade-up delay-200">A comprehensive inventory of professional
+                        audio and lighting gear. From speakers to mixers, we have everything you need to make your event
+                        sound perfect.</p>
+                    <div class="d-flex justify-content-center gap-3 animate-fade-up delay-400">
+                        <a href="rent.html" class="btn btn-primary btn-lg">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Process -->
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Rental <span>Process</span></h2>
+                <p>Simple steps to get the perfect sound for your event.</p>
+            </div>
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6">
+                    <div class="card event-card rental-process-card h-100 border-0 p-4">
+                        <div class="card-body">
+                            <div class="rental-step-number">1</div>
+                            <h5 class="mt-3 fw-bold">Consultation</h5>
+                            <p class="text-muted small">Discuss your event needs with our experts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card event-card rental-process-card h-100 border-0 p-4">
+                        <div class="card-body">
+                            <div class="rental-step-number">2</div>
+                            <h5 class="mt-3 fw-bold">Proposal</h5>
+                            <p class="text-muted small">Receive a tailored package and quote.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card event-card rental-process-card h-100 border-0 p-4">
+                        <div class="card-body">
+                            <div class="rental-step-number">3</div>
+                            <h5 class="mt-3 fw-bold">Setup</h5>
+                            <p class="text-muted small">We deliver, set up, and test everything.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card event-card rental-process-card h-100 border-0 p-4">
+                        <div class="card-body">
+                            <div class="rental-step-number">4</div>
+                            <h5 class="mt-3 fw-bold">Support</h5>
+                            <p class="text-muted small">On-site technical support during your event.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sound Setup Inventory -->
+    <section class="event-types-section py-5">
+        <div class="container">
+            <div class="section-title mb-5">
+                <h2>Our <span>Sound Setup Inventory</span></h2>
+                <p>Professional-grade audio & lighting gear for every need</p>
+            </div>
+            <div class="row g-4">
+                <!-- 8 Channel Sound System -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="img/mixer_8_channel_neon_1771138986713.png" class="card-img-top"
+                                alt="8 Channel Mixer">
+                            <div class="event-card-badge">
+                                <i class="fas fa-sliders-h me-1"></i> Mixer
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">8 Channel Sound System</h4>
+                            <p class="text-muted mb-3">Versatile 8-channel system — the backbone of small to medium
+                                events. Distinct control for multiple microphones, instruments, and playback devices.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Live Band Performances
+                                </li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Conference Panels</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Wedding Ceremonies</li>
+                            </ul>
+                            <a href="pricing.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Request Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15 Inch DJ Speakers -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="img/dj_speakers_15inch_glowing_1771138966703.png" class="card-img-top"
+                                alt="15 Inch DJ Speakers">
+                            <div class="event-card-badge">
+                                <i class="fas fa-volume-up me-1"></i> Speakers
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">2 x 15 Inch DJ Speakers</h4>
+                            <p class="text-muted mb-3">Punchy bass and crystal-clear highs with dual 15-inch active
+                                speakers. Designed for high-impact music and clear speech reinforcement.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-1"><i class="fas fa-bolt text-warning me-2"></i>1000W Peak Power</li>
+                                <li class="mb-1"><i class="fas fa-expand-arrows-alt text-warning me-2"></i>Wide
+                                    Dispersion Waveguide</li>
+                                <li class="mb-1"><i class="fas fa-shield-alt text-warning me-2"></i>Tour-Grade Build
+                                </li>
+                            </ul>
+                            <a href="pricing.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Request Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Power Amplifiers -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="img/neon_power_amp_1771139058129.png" class="card-img-top" alt="Power Amplifiers">
+                            <div class="event-card-badge badge-corporate">
+                                <i class="fas fa-bolt me-1"></i> Power
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Professional Power Amplifiers</h4>
+                            <p class="text-muted mb-3">High-output amplifiers engineered for reliability. Deliver clean,
+                                distortion-free power to drive large speaker arrays at any venue size.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>2-Channel & 4-Channel
+                                    Options</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Built-in Protection
+                                    Circuits</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Rack-Mountable Design
+                                </li>
+                            </ul>
+                            <a href="pricing.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Request Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Mixers -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="img/glowing_audio_mixer_1771139037557.png" class="card-img-top"
+                                alt="Digital Mixer">
+                            <div class="event-card-badge badge-academic">
+                                <i class="fas fa-sliders-h me-1"></i> Digital
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Advanced Digital Mixers</h4>
+                            <p class="text-muted mb-3">Advanced digital processing for complex live sound requirements.
+                                Multi-track recording, built-in effects, and remote control via tablet.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Built-in Effects & EQ
+                                </li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>USB Multi-Track Recording
+                                </li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Wireless Tablet Control
+                                </li>
+                            </ul>
+                            <a href="pricing.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Request Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wireless Microphones -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Wireless Microphones">
+                            <div class="event-card-badge badge-cultural">
+                                <i class="fas fa-microphone-alt me-1"></i> Audio
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Professional Wireless Microphones</h4>
+                            <p class="text-muted mb-3">Brand-name handheld and lapel mics for interference-free audio.
+                                Crystal-clear voice transmission across any venue size.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Handheld & Lapel Options
+                                </li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Anti-Interference
+                                    Technology</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Long Battery Life</li>
+                            </ul>
+                            <a href="pricing.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Request Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moving Head Lights -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card event-card h-100">
+                        <div class="event-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504509546545-e000b4a62425?w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Moving Head Lights">
+                            <div class="event-card-badge badge-sports">
+                                <i class="fas fa-lightbulb me-1"></i> Lighting
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold event-card-title">Intelligent Moving Head Lights</h4>
+                            <p class="text-muted mb-3">Dynamic lighting effects with motorized pan/tilt movement. Create
+                                stunning visual environments for any event stage or dance floor.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>DMX Controllable</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>RGBW Color Mixing</li>
+                                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Sound-Activated Modes
+                                </li>
+                            </ul>
+                            <a href="pricing.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>Request Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="rent.html" class="btn btn-primary btn-lg px-5 py-3"><i class="fas fa-headset me-2"></i>Get a
+                    Custom Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="img/logo.jpeg" alt="Noshahi Sound System" class="footer-logo-brand me-3">
+                        <h5 class="fw-bold text-white mb-0 text-nowrap">Noshahi Sound System</h5>
+                    </div>
+                    <p class="text-secondary small">Your trusted partner for professional audio and lighting solutions
+                        in Gojra and beyond. Crystal clear sound for every occasion.</p>
+                    <div class="social-links mt-4">
+                        <a href="https://facebook.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/noshahisound" target="_blank" class="me-3"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/923281642297" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sound-setup.html">Sound Setup</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="showcase.html">Showcase</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold text-white mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="rent.html">Sound Rental</a></li>
+                        <li><a href="events.html">Lighting Setup</a></li>
+                        <li><a href="events.html">DJ Services</a></li>
+                        <li><a href="events.html">Corporate A/V</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold text-white mb-4">Contact Us</h5>
+                    <a href="https://www.google.com/maps/search/97+JB+Gojra" target="_blank"
+                        class="footer-contact-item mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="text-secondary small">Village 97 JB, Gojra</span>
+                    </a>
+                    <a href="tel:+923281642297" class="footer-contact-item mb-3">
+                        <i class="fas fa-phone"></i>
+                        <span class="text-secondary small">0328-1642297 (Adeel Noshahi)</span>
+                    </a>
+                    <a href="mailto:info@noshahisound.com" class="footer-contact-item mb-3">
+                        <i class="fas fa-envelope"></i>
+                        <span class="text-secondary small">info@noshahisound.com</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 ">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0 small text-secondary">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <p class="mb-0 small text-secondary">Designed with <i class="fas fa-heart text-danger"></i> in
+                            Gojra</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923281642297" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+</body>
+
+</html>

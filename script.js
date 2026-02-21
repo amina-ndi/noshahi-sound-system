@@ -245,6 +245,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 html += '</ul>';
                 modalBody.innerHTML = html;
+
+                // Re-run translation for dynamic content
+                if (window.noshahi && window.noshahi.translatePage) {
+                    window.noshahi.translatePage();
+                }
             }
         });
     }
@@ -307,6 +312,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 html += '</ul>';
                 modalBody.innerHTML = html;
+
+                // Re-run translation for dynamic content
+                if (window.noshahi && window.noshahi.translatePage) {
+                    window.noshahi.translatePage();
+                }
             }
         });
     }

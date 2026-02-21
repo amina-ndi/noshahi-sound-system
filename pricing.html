@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.jpeg" type="image/jpeg">
+    <title>Pricing - Noshahi Sound System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="img/logo.jpeg" alt="Noshahi Sound System" class="navbar-logo me-2">
+                <span>Noshahi</span> Sound System
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sound-setup.html">Sound Setup</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                    <li class="nav-item">
+                        <button id="sound-toggle" class="btn btn-link nav-link" title="Toggle Sound">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="lang-toggle" title="Switch Language">
+                            <i class="fas fa-globe lang-icon"></i>
+                            <span class="lang-label">اردو</span>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="rent.html">Rent It Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero hero-rent d-flex align-items-center justify-content-center text-center position-relative">
+        <div class="container position-relative z-2">
+            <h1 class="display-3 fw-bold text-white mb-4">Transparent <span>Pricing</span></h1>
+            <p class="lead text-white mb-4 animate-fade-up delay-200">Affordable rental rates for professional sound and
+                lighting equipment. No hidden charges, just pure quality.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Tables -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our <span>Event Packages</span></h2>
+                <p>Tailored sound solutions for every occasion with transparent pricing.</p>
+            </div>
+
+            <!-- Popular Packages Grid -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- Royal Walima Reception -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 pricing-card shadow-sm text-center">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-3">Royal Walima Reception</h4>
+                            <p class="text-muted small mb-0">Sophisticated audio for elegant walima</p>
+                            <div class="price-value">Rs. 4,000</div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="feature-list-item"><i class="fas fa-clock"></i>4 Hours Duration</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>2 x Premium Speaker
+                                    Boxes</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Stage Mic & Sound
+                                    Player</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Professional Setup</li>
+                            </ul>
+                            <a href="rent.html" class="btn btn-rent btn-rent-outline w-100">Book Walima</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Traditional Qawwali Night -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 pricing-card featured shadow text-center">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-3">Traditional Qawwali Night</h4>
+                            <p class="text-muted small mb-0">Immersive audio for sufi music</p>
+                            <div class="price-value">Rs. 8,000</div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="feature-list-item"><i class="fas fa-clock"></i>5 Hours Duration</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>2 x High-Output
+                                    Speakers</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>8 x Specialized Vocal
+                                    Mics</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Digital Echo/Reverb
+                                    Mixer</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>On-site Audio Engineer
+                                </li>
+                            </ul>
+                            <a href="rent.html" class="btn btn-rent btn-rent-primary w-100">Book Qawwali</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grand Wedding Celebrations -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 pricing-card shadow-sm text-center">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-3">Grand Wedding Celebrations</h4>
+                            <p class="text-muted small mb-0">Full coverage for large venues</p>
+                            <div class="price-value">Rs. 15,000</div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="feature-list-item"><i class="fas fa-clock"></i>6 Hours Duration</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>4 x High-Power Speakers
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>4 x Shure Wireless Mics
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Ambient Stage Lighting
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Full Technical Support
+                                </li>
+                            </ul>
+                            <a href="rent.html" class="btn btn-rent btn-rent-outline w-100">Book Wedding</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sacred Mehfil-e-Naat -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 pricing-card shadow-sm text-center">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-3">Sacred Mehfil-e-Naat</h4>
+                            <p class="text-muted small mb-0">Spiritual audio with pristine clarity</p>
+                            <div class="price-value">Rs. 10,000</div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="feature-list-item"><i class="fas fa-clock"></i>5 Hours Duration</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>4 x Speaker Boxes</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Custom Reverb/Delay
+                                    Setup</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>4 x High-End Vocal Mics
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Zero-Feedback System
+                                </li>
+                            </ul>
+                            <a href="rent.html" class="btn btn-rent btn-rent-outline w-100">Book Mehfil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Birthday Extravaganza -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 pricing-card shadow-sm text-center">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-3">Birthday Extravaganza</h4>
+                            <p class="text-muted small mb-0">Party sound and dynamic lights</p>
+                            <div class="price-value">Rs. 6,000</div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="feature-list-item"><i class="fas fa-clock"></i>4 Hours Duration</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>2 x Active Party
+                                    Speakers</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>LED Sound-Activated
+                                    Lights</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>1 x Wireless Mic & AUX
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Compact Easy Setup</li>
+                            </ul>
+                            <a href="rent.html" class="btn btn-rent btn-rent-outline w-100">Book Birthday</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate & Business Events -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 pricing-card shadow-sm text-center">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-3">Corporate & Business Events</h4>
+                            <p class="text-muted small mb-0">Reliable A/V for professionals</p>
+                            <div class="price-value">Rs. 12,000</div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="feature-list-item"><i class="fas fa-clock"></i>8 Hours Duration</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>2 x High-Fidelity
+                                    Speakers</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Wireless Lapel & Hand
+                                    Mics</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Projector Audio Sync
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Dedicated On-site Tech
+                                </li>
+                            </ul>
+                            <a href="rent.html" class="btn btn-rent btn-rent-outline w-100">Book Corporate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Reunion Gatherings -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 pricing-card shadow-sm text-center">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-3">Family Reunion Gatherings</h4>
+                            <p class="text-muted small mb-0">Clear speech & warm background music</p>
+                            <div class="price-value">Rs. 5,000</div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="feature-list-item"><i class="fas fa-clock"></i>6 Hours Duration</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>2 x Balanced Speakers
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>2 x Vocal Microphones
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Bluetooth Music Player
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Discreet Setup</li>
+                            </ul>
+                            <a href="rent.html" class="btn btn-rent btn-rent-outline w-100">Book Reunion</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School & Academic Programs -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 pricing-card shadow-sm text-center">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-3">School & Academic Programs</h4>
+                            <p class="text-muted small mb-0">Wide-coverage PA for assemblies</p>
+                            <div class="price-value">Rs. 7,000</div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="feature-list-item"><i class="fas fa-clock"></i>5 Hours Duration</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>2-4 Speaker Distributed
+                                    Array</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Podium & Handheld Mics
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Feedback Protection
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Quick Event Teardown
+                                </li>
+                            </ul>
+                            <a href="rent.html" class="btn btn-rent btn-rent-outline w-100">Book Program</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports & Tournament Events -->
+                <div class="col-lg-4 col-md-6 border-0">
+                    <div class="card h-100 pricing-card shadow-sm text-center ">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-3">Sports & Tournament Events</h4>
+                            <p class="text-muted small mb-0">Stadium-grade outdoor audio</p>
+                            <div class="price-value">Rs. 9,000</div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="feature-list-item"><i class="fas fa-clock"></i>Full Day (8+ Hours)</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Long-Throw Speaker
+                                    System</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Wireless Commentary
+                                    Mics</li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>Energizing Music Setup
+                                </li>
+                                <li class="feature-list-item"><i class="fas fa-check-circle"></i>All-Weather Equipment
+                                </li>
+                            </ul>
+                            <a href="rent.html" class="btn btn-rent btn-rent-outline w-100">Book Sports</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Notes -->
+            <div class="mt-5">
+                <div class="alert alert-info border-0 shadow-sm p-4 rounded-4">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-info-circle fs-4 me-3"></i>
+                        <p class="mb-0 fw-bold">Note: Prices may vary based on exact location in Gojra and additional
+                            equipment requirements. Contact us for custom configurations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="img/logo.jpeg" alt="Noshahi Sound System" class="footer-logo-brand me-3">
+                        <h5 class="fw-bold text-white mb-0 text-nowrap">Noshahi Sound System</h5>
+                    </div>
+                    <p class="text-secondary small">Your trusted partner for professional audio and lighting solutions
+                        in Gojra and beyond. Crystal clear sound for every occasion.</p>
+                    <div class="social-links mt-4">
+                        <a href="https://facebook.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/noshahisound" target="_blank" class="me-3"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/923281642297" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sound-setup.html">Sound Setup</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="showcase.html">Showcase</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold text-white mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="rent.html">Sound Rental</a></li>
+                        <li><a href="events.html">Lighting Setup</a></li>
+                        <li><a href="events.html">DJ Services</a></li>
+                        <li><a href="events.html">Corporate A/V</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold text-white mb-4">Contact Us</h5>
+                    <a href="https://www.google.com/maps/search/97+JB+Gojra" target="_blank"
+                        class="footer-contact-item mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="text-secondary small">Village 97 JB, Gojra</span>
+                    </a>
+                    <a href="tel:+923281642297" class="footer-contact-item mb-3">
+                        <i class="fas fa-phone"></i>
+                        <span class="text-secondary small">0328-1642297 (Adeel Noshahi)</span>
+                    </a>
+                    <a href="mailto:info@noshahisound.com" class="footer-contact-item mb-3">
+                        <i class="fas fa-envelope"></i>
+                        <span class="text-secondary small">info@noshahisound.com</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 ">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0 small text-secondary">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <p class="mb-0 small text-secondary">Designed with <i class="fas fa-heart text-danger"></i> in
+                            Gojra</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923281642297" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+</body>
+
+</html>

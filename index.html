@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.jpeg" type="image/jpeg">
     <title>Noshahi Sound System - Professional Audio Rentals</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,17 +21,26 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">NOSHAHI SOUND</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="img/logo.jpeg" alt="Noshahi Sound System" class="navbar-logo me-2">
+                <span>Noshahi</span> Sound System
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sound-setup.html">Sound Setup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
                     <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -40,6 +50,12 @@
                             <i class="fas fa-volume-up"></i>
                         </button>
                     </li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="lang-toggle" title="Switch Language">
+                            <i class="fas fa-globe lang-icon"></i>
+                            <span class="lang-label">اردو</span>
+                        </button>
+                    </li>
                     <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="rent.html">Rent It Now</a></li>
                 </ul>
             </div>
@@ -47,19 +63,22 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 hero-content">
-                    <h1>Premium Audio Solutions <br> <span>for Your Next Event</span></h1>
-                    <p>From intimate weddings to large corporate conferences, Noshahi Sound System delivers
-                        crystal-clear sound and professional lighting reliability.</p>
-                    <a href="equipment.html" class="btn btn-primary btn-lg me-3">View Equipment</a>
-                    <a href="contact.html" class="btn btn-outline-primary btn-lg">Get a Quote</a>
-                </div>
-                <div class="col-lg-6 hero-image mt-5 mt-lg-0">
-                    <img src="img/dj_setup_wide_1771139093203.png" class="img-fluid rounded shadow-lg hover-scale"
-                        alt="Professional Sound Setup">
+    <!-- Hero Section -->
+    <section
+        class="hero-section hero-home d-flex align-items-center justify-content-center text-center position-relative">
+        <div class="container position-relative z-2">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-3 fw-bold text-white mb-4">Premium Audio Solutions <br> <span>for
+                            Your Next Event</span></h1>
+                    <p class="lead text-white mb-5 animate-fade-up delay-200">From intimate weddings to large corporate
+                        conferences, Noshahi Sound System delivers crystal-clear sound and professional lighting
+                        reliability.</p>
+                    <div class="d-flex justify-content-center gap-3 animate-fade-up delay-400">
+                        <a href="sound-setup.html" class="btn btn-primary btn-lg">View Sound Setup</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">Get a Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,25 +88,25 @@
     <section class="event-types-section py-5">
         <div class="container">
             <div class="section-title mb-5">
-                <h2>Why Choose <span>Noshahi Sound?</span></h2>
-                <p>We combine top-tier equipment with decades of expertise.</p>
+                <h2>Why Choose <span>Noshahi Sound System?</span></h2>
+                <p>We combine top-tier Sound Setup with decades of expertise.</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Premium Equipment">
+                            <img src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=800&h=500&fit=crop"
+                                class="card-img-top" alt="Premium Sound Setup">
                             <div class="event-card-badge">
                                 <i class="fas fa-certificate me-1"></i> Premium
                             </div>
                         </div>
                         <div class="card-body text-center p-4">
-                            <h4 class="fw-bold event-card-title">Premium Equipment</h4>
+                            <h4 class="fw-bold event-card-title">Premium Sound Setup</h4>
                             <p class="text-muted mb-4">We use industry-standard brands like JBL, Yamaha, and Shure to
                                 ensure perfect audio quality at every event we serve.</p>
-                            <a href="equipment.html" class="btn btn-event-cta">
-                                <i class="fas fa-arrow-right me-2"></i>View Equipment
+                            <a href="sound-setup.html" class="btn btn-event-cta">
+                                <i class="fas fa-arrow-right me-2"></i>View Sound Setup
                             </a>
                         </div>
                     </div>
@@ -95,8 +114,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600&h=400&fit=crop"
-                                class="card-img-top" alt="Expert Support">
+                            <img src="img/sport.jpg" class="card-img-top" alt="Expert Support">
                             <div class="event-card-badge badge-corporate">
                                 <i class="fas fa-users-cog me-1"></i> Expert
                             </div>
@@ -114,7 +132,7 @@
                 <div class="col-lg-4 col-md-6 mx-auto">
                     <div class="card event-card h-100">
                         <div class="event-card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop"
+                            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&h=500&fit=crop"
                                 class="card-img-top" alt="Reliability">
                             <div class="event-card-badge badge-sports">
                                 <i class="fas fa-clock me-1"></i> Reliable
@@ -134,7 +152,7 @@
         </div>
     </section>
 
-    <!-- Featured Equipment Preview -->
+    <!-- Featured Sound Setup Preview -->
     <section class="event-types-section py-5"
         style="background: linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);">
         <div class="container">
@@ -221,45 +239,89 @@
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="equipment.html" class="btn btn-primary btn-lg px-5 py-3"><i
+                <a href="sound-setup.html" class="btn btn-primary btn-lg px-5 py-3"><i
                         class="fas fa-headset me-2"></i>View Full Inventory</a>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials (Simulated) -->
-    <section class="py-5">
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title mb-5">
                 <h2>What <span>Our Clients Say</span></h2>
+                <p>Real experiences from our valued customers</p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner text-center">
-                            <div class="carousel-item active">
-                                <p class="lead fst-italic mb-4">"Noshahi Sound made our wedding reception absolutely
-                                    perfect. The sound was clear, and the lighting set the perfect mood."</p>
-                                <h5 class="fw-bold">- Sarah & Ahmed</h5>
-                            </div>
-                            <div class="carousel-item">
-                                <p class="lead fst-italic mb-4">"Professional, punctual, and high-quality gear. Highly
-                                    recommended for corporate events."</p>
-                                <h5 class="fw-bold">- Tech Solutions Ltd.</h5>
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Noshahi Sound made our wedding reception absolutely perfect. The
+                            sound was clear, and the lighting set the perfect mood."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1621112904887-419379ce6824?w=150&h=150&fit=crop"
+                                alt="Sarah & Ahmed" class="author-img">
+                            <div class="author-info">
+                                <h5 class="fw-bold mb-0">Sarah & Ahmed</h5>
+                                <span>Wedding Client</span>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"
-                                aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon bg-dark rounded-circle p-3"
-                                aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Professional, punctual, and high-quality gear. Highly recommended
+                            for corporate events."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+                                alt="Tech Solutions" class="author-img">
+                            <div class="author-info">
+                                <h5 class="fw-bold mb-0">Tech Solutions Ltd.</h5>
+                                <span>Corporate Event</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Crystal clear audio even at high volumes. Their digital mixers make
+                            a huge difference."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop"
+                                alt="Ali Raza" class="author-img">
+                            <div class="author-info">
+                                <h5 class="fw-bold mb-0">Ali Raza</h5>
+                                <span>Concert Organizer</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -271,22 +333,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold text-white mb-4">NOSHAHI SOUND</h5>
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="img/logo.jpeg" alt="Noshahi Sound System" class="footer-logo-brand me-3">
+                        <h5 class="fw-bold text-white mb-0 text-nowrap">Noshahi Sound System</h5>
+                    </div>
                     <p class="text-secondary small">Your trusted partner for professional audio and lighting solutions
-                        in Gojra and beyond.</p>
+                        in Gojra and beyond. Crystal clear sound for every occasion.</p>
+                    <div class="social-links mt-4">
+                        <a href="https://facebook.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/noshahisound" target="_blank" class="me-3"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/923281642297" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                    <h5>Quick Links</h5>
+                    <h5 class="fw-bold text-white mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="sound-setup.html">Sound Setup</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="showcase.html">Showcase</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                    <h5>Services</h5>
+                    <h5 class="fw-bold text-white mb-4">Services</h5>
                     <ul class="list-unstyled">
                         <li><a href="rent.html">Sound Rental</a></li>
                         <li><a href="events.html">Lighting Setup</a></li>
@@ -295,23 +370,30 @@
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <h5>Contact Us</h5>
-                    <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Village 97 JB, Gojra</li>
-                        <li class="mb-2"><i class="fas fa-phone me-2"></i> 0328-1642297 (Adeel Noshahi)</li>
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@noshahisound.com</li>
-                    </ul>
+                    <h5 class="fw-bold text-white mb-4">Contact Us</h5>
+                    <a href="https://www.google.com/maps/search/97+JB+Gojra" target="_blank"
+                        class="footer-contact-item mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="text-secondary small">Village 97 JB, Gojra</span>
+                    </a>
+                    <a href="tel:+923281642297" class="footer-contact-item mb-3">
+                        <i class="fas fa-phone"></i>
+                        <span class="text-secondary small">0328-1642297 (Adeel Noshahi)</span>
+                    </a>
+                    <a href="mailto:info@noshahisound.com" class="footer-contact-item mb-3">
+                        <i class="fas fa-envelope"></i>
+                        <span class="text-secondary small">info@noshahisound.com</span>
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom mt-5 pt-4 ">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start">
-                        <p class="mb-0 small">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
+                        <p class="mb-0 small text-secondary">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                        <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                        <p class="mb-0 small text-secondary">Designed with <i class="fas fa-heart text-danger"></i> in
+                            Gojra</p>
                     </div>
                 </div>
             </div>
@@ -324,7 +406,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-light">
-                    <h5 class="modal-title fw-bold" id="fleetDetailModalLabel">Equipment Details</h5>
+                    <h5 class="modal-title fw-bold" id="fleetDetailModalLabel">Sound Setup Details</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="fleetDetailModalBody">
@@ -346,6 +428,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="translations.js"></script>
 </body>
 
 </html>

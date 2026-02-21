@@ -1,4 +1,4 @@
-/* Custom Styles for Noshahi Sound System - Corporate Edition */
+@import url('https://cdn.jsdelivr.net/gh/noormuhammad/urdu-fonts/JameelNooriKasheeda.css');
 
 :root {
     --primary-color: #FF0051;
@@ -13,14 +13,81 @@
     --card-bg: #FFFFFF;
 }
 
-
-
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--text-dark);
     background-color: var(--bg-white);
     overflow-x: hidden;
 }
+
+/* Global Urdu Font Application */
+body.lang-urdu,
+body.lang-urdu *:not(i):not([class*="fa-"]) {
+    font-family: 'Jameel Noori Kasheeda', serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px !important;
+}
+
+/* Ensure English text in buttons/labels doesn't use the Urdu font */
+body.lang-urdu .en-text,
+body.lang-urdu [lang="en"] {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: normal !important;
+    font-size: 0.9rem !important;
+    /* Slightly smaller for English text in buttons */
+}
+
+
+/* Exception for Icons - Extra robust */
+body.lang-urdu i,
+body.lang-urdu [class^="fa-"],
+body.lang-urdu [class*=" fa-"],
+body.lang-urdu .fas,
+body.lang-urdu .fab,
+body.lang-urdu .fa-solid,
+body.lang-urdu .fa-brands,
+body.lang-urdu .fa-regular {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", sans-serif !important;
+    font-weight: 900 !important;
+    letter-spacing: normal !important;
+    line-height: inherit !important;
+    display: inline-block !important;
+}
+
+/* Line height adjustment for Urdu readability - Exclude buttons and nav links */
+body.lang-urdu p,
+body.lang-urdu h1,
+body.lang-urdu h2,
+body.lang-urdu h3,
+body.lang-urdu h4,
+body.lang-urdu h5,
+body.lang-urdu h6 {
+    line-height: 2.2 !important;
+}
+
+/* Fix for buttons and nav links in Urdu mode to prevent them from being too large */
+body.lang-urdu .btn,
+body.lang-urdu .nav-link,
+body.lang-urdu #lang-toggle,
+body.lang-urdu .btn-cta {
+    line-height: 1.1 !important;
+    padding: 6px 15px !important;
+    font-size: 0.9rem !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+body.lang-urdu .navbar-nav {
+    align-items: center;
+}
+
+
+
+
+
+
 
 h1,
 h2,
@@ -34,7 +101,9 @@ h6,
 }
 
 h1 span,
-h2 span {
+h2 span,
+h3 span,
+.gradient-text {
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -45,22 +114,47 @@ h2 span {
 
 /* Navbar */
 .navbar {
-    background-color: var(--bg-white) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    padding: 15px 0;
+    background-color: #000000 !important;
+    /* Pure black to match most image backgrounds */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+    transition: all 0.3s ease;
 }
 
 .navbar-brand {
-    color: var(--primary-color) !important;
+    color: #ffffff !important;
     font-size: 1.5rem;
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    font-weight: 800 !important;
+    white-space: nowrap;
 }
 
+.navbar-brand span {
+    color: #ffffff !important;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+.navbar-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 15px;
+    border-radius: 4px;
+    mix-blend-mode: screen;
+    /* This will make the black background of the image transparent */
+}
+
+
+
 .nav-link {
-    color: var(--text-dark) !important;
+    color: #ffffff !important;
     font-weight: 600;
     margin-right: 20px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -68,37 +162,329 @@ h2 span {
     color: var(--primary-color) !important;
 }
 
+#lang-toggle {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#lang-toggle:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.lang-label {
+    font-family: 'Jameel Noori Kasheeda', serif !important;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+
+/* Fix for icons not showing */
+i[class^="fa-"],
+i[class*=" fa-"] {
+    display: inline-block !important;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+
 .btn-cta {
     background-color: var(--primary-color);
     color: #fff !important;
-    padding: 10px 25px;
+    padding: 8px 24px;
     border-radius: 5px;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .btn-cta:hover {
     background-color: var(--secondary-color);
 }
 
-/* Hero Section */
+/* Navbar Responsiveness - Center Content */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar-nav {
+        align-items: center !important;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .nav-link {
+        margin-right: 0 !important;
+        display: inline-block;
+        font-size: 1.1rem;
+        padding: 10px 0 !important;
+    }
+
+    #lang-toggle,
+    #sound-toggle {
+        justify-content: center;
+        margin: 10px auto !important;
+        width: fit-content;
+    }
+
+    .btn-cta {
+        margin: 15px auto !important;
+        display: inline-block !important;
+        width: auto !important;
+        min-width: 180px;
+    }
+}
+
+
+/* Hero Section Button Responsiveness */
+@media (max-width: 576px) {
+    .hero-section .btn {
+        white-space: nowrap !important;
+        font-size: 0.85rem !important;
+        padding: 10px 12px !important;
+        width: auto !important;
+    }
+
+    .hero-section .d-flex.gap-3 {
+        gap: 10px !important;
+        flex-wrap: wrap;
+        /* Allow buttons to wrap to next line but keep text on one line */
+        justify-content: center;
+    }
+}
+
+/* Hero Section — Split Design: Colored Left, Image Right */
 .hero-section {
-    background-color: var(--bg-light);
-    padding: 100px 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 150px 0;
+    /* Default/Home size */
     text-align: left;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+/* Page Specific Hero Backgrounds (3D Full HD Style) */
+.hero-home {
+    background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1920&q=80');
+}
+
+.hero-about {
+    background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&h=500&fit=crop&q=80');
+}
+
+.hero-sound-setup {
+    background-image: url('img/equipment.jpg');
+}
+
+.hero-events {
+    background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1920&q=80');
+}
+
+.hero-contact {
+    background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80');
+}
+
+.hero-rent {
+    background-image: url('img/home.jpg');
+}
+
+/* Reduced size for internal page heros */
+.hero-section:not(.hero-home) {
+    min-height: 40vh !important;
+    padding: 80px 0 !important;
+}
+
+.video-hero-section {
+    background-image: url('img/about.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 0;
+    color: white;
+}
+
+
+
+
+/* Lighter, more transparent overlay to show full image beauty */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+
+
+
+
+/* Subtle brand-color accent line at bottom */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color), transparent);
+    z-index: 1;
+}
+
+.hero-section>.container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Page-Specific Hero Backgrounds */
+/* Page-Specific Hero Backgrounds */
+.hero-home {
+    background-image: url('img/home.jpg');
+}
+
+.hero-events {
+    background-image: url('img/event.jpg');
+}
+
+.hero-about {
+    background-image: url('img/about.jpg');
+}
+
+.hero-sound-setup {
+    background-image: url('img/sound-setup.jpg');
+}
+
+.hero-contact {
+    background-image: url('img/event.jpg');
+}
+
+.hero-rent {
+    /* Placeholder or default until image can be generated */
+    background-image: url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1920&q=80');
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.animate-fade-up {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate-zoom-in {
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+/* Hero Content Styling */
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
-    color: var(--text-dark);
+    color: #ffffff;
     line-height: 1.2;
     margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    animation: zoomIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(45deg, #FF6B8A, #FF0051);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    color: var(--text-light);
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: 30px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s both;
+    animation-delay: 0.3s;
+}
+
+.hero-content .btn {
+    animation: fadeInUp 1s both;
+    animation-delay: 0.6s;
+    box-shadow: 0 4px 15px rgba(255, 0, 81, 0.4);
+}
+
+/* Hide the inline hero image — background IS the image */
+.hero-section .hero-image {
+    display: none;
 }
 
 /* Inner Page Hero Sections */
@@ -107,11 +493,15 @@ h2 span {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 150px 0;
+    padding: 80px 0;
+    /* Reduced from 160px */
     color: white;
     text-align: center;
-    background-image: url('img/dj_setup_wide_1771139093203.png');
+    background-image: url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1920&q=80');
     margin-top: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .page-hero::before {
@@ -119,20 +509,40 @@ h2 span {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-}
-
-.page-hero .container {
-    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
-.page-hero h1 {
-    color: white;
-    margin-bottom: 1rem;
+
+
+.page-hero>.container {
+    position: relative;
+    z-index: 2;
 }
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.8s both;
+}
+
+.page-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    animation: fadeInUp 0.8s both 0.3s;
+}
+
+.page-hero .btn {
+    animation: fadeInUp 0.8s both 0.6s;
+}
+
+/* Cleaned up duplicate page-hero rules */
 
 .page-hero p {
     color: rgba(255, 255, 255, 0.9);
@@ -190,13 +600,10 @@ section {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     background-color: #fff0f5;
-    /* Light pinkish tint (Lavender Blush) to match brand */
     border: 1px solid var(--primary-color);
     border-left: 5px solid var(--primary-color);
     border-right: 5px solid var(--primary-color);
 }
-
-
 
 .card-img-top {
     height: 220px;
@@ -475,13 +882,13 @@ footer a:hover {
 }
 
 .play-button {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.95);
     border: none;
     color: var(--primary-color);
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -825,6 +1232,18 @@ footer a:hover {
     .cta-buttons .btn.me-3 {
         margin-right: 0 !important;
     }
+
+    /* Showcase Play Button Responsive */
+    .play-button {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.5rem !important;
+    }
+
+    .play-button-wrapper p {
+        font-size: 1rem !important;
+        margin-top: 15px !important;
+    }
 }
 
 /* ========================================
@@ -972,7 +1391,22 @@ footer a:hover {
     }
 }
 
-/* Rental Process Step Numbers */
+/* Professional Rental Process Cards */
+.rental-process-card {
+    border-radius: 12px !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    border-top: 5px solid var(--primary-color) !important;
+    padding: 25px 15px !important;
+    height: 100%;
+}
+
+.rental-process-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(255, 0, 81, 0.15) !important;
+}
+
 .rental-step-number {
     width: 60px;
     height: 60px;
@@ -984,6 +1418,976 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 10px;
-    box-shadow: 0 4px 15px rgba(255, 0, 81, 0.3);
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 12px rgba(255, 0, 81, 0.3);
+}
+
+@media (max-width: 576px) {
+    .rental-process-card {
+        padding: 20px 10px !important;
+        margin-bottom: 5px;
+    }
+
+    .rental-process-card h5 {
+        font-size: 1.25rem !important;
+        /* Text bra rkhain */
+        font-weight: 700 !important;
+        margin-top: 10px !important;
+    }
+
+    .rental-process-card p {
+        font-size: 1.05rem !important;
+        /* Text bra rkhain */
+        line-height: 1.4 !important;
+    }
+
+    .rental-step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+}
+
+/* Urdu specific text size boost */
+body.lang-urdu .rental-process-card h5 {
+    font-size: 1.4rem !important;
+}
+
+body.lang-urdu .rental-process-card p {
+    font-size: 1.15rem !important;
+}
+
+/* ══════════════════════════════════════════════════════
+   Language Toggle Button
+   ══════════════════════════════════════════════════════ */
+#lang-toggle {
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    padding: 5px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+/* Call & WhatsApp Styles */
+.btn-call {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff !important;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 0, 81, 0.3);
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-call:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 0, 81, 0.4);
+    color: #fff !important;
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #128c7e, #075e54);
+    color: #fff !important;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(18, 140, 126, 0.3);
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(7, 94, 84, 0.4);
+    color: #fff !important;
+}
+
+#lang-toggle:hover {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 0, 81, 0.3);
+}
+
+#lang-toggle .lang-icon {
+    font-size: 1rem;
+}
+
+/* ══════════════════════════════════════════════════════
+   Urdu / RTL Mode
+   ══════════════════════════════════════════════════════ */
+body.lang-urdu {
+    font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Mehr Nastaliq', 'Nafees Nastaleeq', serif;
+    direction: rtl;
+    text-align: right;
+}
+
+body.lang-urdu .navbar-nav {
+    text-align: right;
+}
+
+body.lang-urdu .navbar-brand {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+body.lang-urdu .hero-content {
+    text-align: right;
+}
+
+body.lang-urdu .hero-content p {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+body.lang-urdu .section-title {
+    text-align: center;
+}
+
+body.lang-urdu .card-body {
+    text-align: center;
+}
+
+body.lang-urdu .text-start {
+    text-align: right !important;
+}
+
+body.lang-urdu .me-1,
+body.lang-urdu .me-2,
+body.lang-urdu .me-3 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+body.lang-urdu .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+body.lang-urdu .ms-lg-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+/* Default alignment for Urdu */
+body.lang-urdu footer {
+    text-align: right;
+}
+
+/* Footer Responsiveness for Urdu */
+@media (max-width: 768px) {
+    body.lang-urdu footer {
+        text-align: center !important;
+    }
+
+    body.lang-urdu footer .footer-contact-item,
+    body.lang-urdu footer .social-links,
+    body.lang-urdu footer .d-flex.align-items-center {
+        justify-content: center !important;
+    }
+
+    body.lang-urdu .footer-bottom .text-center {
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 768px) {
+    body.lang-urdu .text-md-end {
+        text-align: left !important;
+    }
+
+    body.lang-urdu .text-md-start {
+        text-align: right !important;
+    }
+}
+
+body.lang-urdu .btn .fas,
+body.lang-urdu .btn .fab {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+/* Hero section flip: image on LEFT, text on RIGHT in Urdu mode */
+body.lang-urdu .hero-section {
+    background-position: left center;
+}
+
+body.lang-urdu .hero-section::before {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+body.lang-urdu .hero-section::after {
+    background: linear-gradient(to left, var(--primary-color), var(--secondary-color), transparent);
+}
+
+body.lang-urdu .page-hero::before {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+/* Event card badge flip */
+body.lang-urdu .event-card-badge {
+    right: auto;
+    left: 15px;
+}
+
+/* Testimonial card border flip */
+body.lang-urdu .testimonial-card {
+    border-left: none;
+    border-right: 4px solid var(--primary-color);
+}
+
+/* Form alignment */
+body.lang-urdu .form-control,
+body.lang-urdu .form-select,
+body.lang-urdu textarea {
+    text-align: right;
+}
+
+body.lang-urdu .form-label {
+    text-align: right;
+    display: block;
+}
+
+body.lang-urdu .form-check {
+    padding-left: 0;
+    padding-right: 1.5em;
+}
+
+body.lang-urdu .form-check-input {
+    float: right;
+    margin-left: 0.5em;
+    margin-right: -1.5em;
+}
+
+/* ══════════════════════════════════════════════════════
+   Custom Animated Navbar Toggler
+   ══════════════════════════════════════════════════════ */
+.navbar-toggler {
+    border: none !important;
+    padding: 10px;
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hamburger-menu {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+/* Animation when toggled (Bootstrap uses collapsed class) */
+.navbar-toggler:not(.collapsed) .hamburger-menu span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+    position: absolute;
+}
+
+.navbar-toggler:not(.collapsed) .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+    position: absolute;
+}
+
+.navbar-toggler:not(.collapsed) .hamburger-menu span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+    position: absolute;
+}
+
+/* Mobile Navbar Optimization */
+@media (max-width: 991px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.95) !important;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar>.container {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        color: #ffffff !important;
+        font-size: 1.2rem !important;
+        margin-right: 0;
+        display: flex !important;
+        align-items: center;
+        flex-shrink: 1;
+        overflow: hidden;
+    }
+
+    .navbar-logo {
+        height: 40px !important;
+        margin-right: 10px !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.98);
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 15px;
+        border: 1px solid rgba(255, 0, 81, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        max-height: 80vh;
+        overflow-y: auto;
+        /* Ensure collapse is below the brand/toggler line */
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .nav-link {
+        margin-right: 0;
+        font-size: 1.1rem;
+        padding: 12px !important;
+    }
+
+    .navbar-nav .nav-item:last-child {
+        margin-top: 10px;
+    }
+
+    #lang-toggle {
+        margin: 10px auto;
+        justify-content: center;
+        width: fit-content;
+    }
+
+    #sound-toggle {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar-brand {
+        font-size: 1rem !important;
+    }
+
+    .navbar-logo {
+        height: 35px !important;
+        margin-right: 8px !important;
+    }
+}
+
+
+/* Global Responsive Spacing Improvements */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem !important;
+    }
+
+    .page-hero h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-bottom .text-md-end {
+        margin-top: 15px;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .btn-lg {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Fixed cards on mobile */
+    .event-card-img-wrapper {
+        height: 200px;
+    }
+}
+
+/* Fix for RTL Mobile */
+body.lang-urdu .navbar-collapse {
+    text-align: center;
+}
+
+body.lang-urdu .navbar-brand span {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+
+body.lang-urdu .hamburger-menu span {
+    left: auto;
+    right: 0;
+}
+
+body.lang-urdu .navbar-logo {
+    margin-right: 0 !important;
+    margin-left: 10px !important;
+}
+
+@media (max-width: 380px) {
+    body.lang-urdu .navbar-logo {
+        margin-left: 8px !important;
+    }
+}
+
+/* Event Type Cards Expansion */
+.event-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid var(--primary-color) !important;
+    /* Thick border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ── Pricing Page Enhancements ──────────────── */
+.pricing-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid var(--primary-color) !important;
+    /* Thick border */
+}
+
+/* Inactive Card Styling */
+.card-inactive {
+    opacity: 0.6;
+    filter: grayscale(1);
+    pointer-events: none;
+    /* Disable clicks */
+    position: relative;
+    border: 3px solid #ccc !important;
+}
+
+.card-inactive::after {
+    content: "UNAVAILABLE";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 10px 30px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    z-index: 10;
+    letter-spacing: 2px;
+}
+
+body.lang-urdu .card-inactive::after {
+    content: "دستیاب نہیں ہے";
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+.pricing-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+}
+
+.pricing-card .card-body {
+    padding: 3rem 2rem !important;
+}
+
+.pricing-card .price-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin: 1.5rem 0;
+    display: block;
+    line-height: 1;
+}
+
+.pricing-card.featured {
+    background: linear-gradient(145deg, #ffffff 0%, #f9f9f9 100%);
+    border: 2px solid var(--primary-color) !important;
+}
+
+.pricing-card.featured .price-value {
+    color: var(--primary-color);
+}
+
+.pricing-card .feature-list-item {
+    margin-bottom: 1rem;
+    color: #555;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-card .feature-list-item i {
+    color: var(--primary-color);
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+
+/* Urdu specific adjustments for spacing in RTL */
+body.lang-urdu .pricing-card .feature-list-item i {
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+.pricing-card .btn-rent {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.pricing-card .btn-rent-primary {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+}
+
+.pricing-card .btn-rent-primary:hover {
+    background: var(--secondary-color);
+    box-shadow: 0 10px 20px rgba(255, 0, 81, 0.2);
+}
+
+.pricing-card .btn-rent-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.pricing-card .btn-rent-outline:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.table-pricing {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.table-pricing thead th {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 1.5rem 1rem;
+    border: none;
+}
+
+.table-pricing tbody td {
+    padding: 1.2rem 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Urdu Mode Specific Enhancements */
+body.lang-urdu .btn-cta {
+    padding: 4px 25px 8px 25px !important;
+    /* Adjust for Urdu font height */
+    font-size: 1.1rem !important;
+}
+
+body.lang-urdu .pricing-card.featured {
+    box-shadow: 0 10px 30px rgba(255, 0, 81, 0.15) !important;
+}
+
+body.lang-urdu .pricing-card:hover {
+    box-shadow: 0 25px 50px rgba(255, 0, 81, 0.2) !important;
+}
+
+body.lang-urdu .price-value {
+    font-size: 2.8rem;
+    /* Urdu text can be bulky, slightly smaller size */
+    margin-bottom: 2rem;
+}
+
+body.lang-urdu .pricing-card .feature-list-item {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+body.lang-urdu .btn-rent {
+    letter-spacing: 0;
+    font-size: 1.2rem;
+    padding: 8px 30px 12px 30px;
+}
+
+/* Global Button Scaling for Urdu - Balanced */
+body.lang-urdu .btn,
+body.lang-urdu .btn-cta,
+body.lang-urdu .btn-primary,
+body.lang-urdu .btn-event-cta {
+    font-size: 1.15rem !important;
+    padding: 8px 25px 12px 25px !important;
+    min-width: 150px;
+    border-radius: 6px !important;
+}
+
+/* Responsive adjustment for Mobile (Smaller Buttons) */
+@media (max-width: 768px) {
+
+    body.lang-urdu .btn,
+    body.lang-urdu .btn-cta,
+    body.lang-urdu .btn-primary,
+    body.lang-urdu .btn-event-cta {
+        font-size: 1rem !important;
+        padding: 6px 15px 10px 15px !important;
+        min-width: auto !important;
+        /* Allow buttons to shrink on mobile */
+        width: 100% !important;
+        /* Optional: stretch to full width on mobile if inside stacks */
+    }
+
+    body.lang-urdu .navbar-nav .btn-cta {
+        width: auto !important;
+        /* Keep navbar button centered/normal */
+    }
+}
+
+/* Specifically for navbar icons/small buttons */
+body.lang-urdu .navbar-toggler,
+body.lang-urdu #sound-toggle,
+body.lang-urdu #lang-toggle {
+    min-width: auto !important;
+    padding: 5px 15px !important;
+}
+
+/* Increase Navbar Brand Size for Urdu */
+body.lang-urdu .navbar-brand {
+    font-size: 1.85rem !important;
+    line-height: 1.2;
+}
+
+
+/* ── Testimonials Redesign ──────────────── */
+.testimonials-section {
+    background: linear-gradient(180deg, var(--bg-light) 0%, #fff 100%);
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(255, 0, 81, 0.1);
+    border-color: rgba(255, 0, 81, 0.2);
+}
+
+.quote-icon {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 3rem;
+    color: var(--primary-color);
+    opacity: 0.1;
+}
+
+.testimonial-stars {
+    color: #ffcc00;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    padding: 2px;
+}
+
+.author-info h5 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.author-info span {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Urdu adjustment for Testimonials */
+body.lang-urdu .quote-icon {
+    right: auto;
+    left: 25px;
+}
+
+body.lang-urdu .testimonial-text {
+    font-size: 1.15rem;
+    line-height: 2;
+}
+
+/* ── Professional Footer Redesign ──────────────── */
+footer {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    padding: 80px 0 30px;
+}
+
+.footer-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 25px;
+    mix-blend-mode: screen;
+}
+
+.footer-logo-brand {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+footer h5 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+/* Accent lines removed */
+
+footer ul li {
+    margin-bottom: 12px;
+}
+
+footer ul li a {
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+footer ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 8px;
+}
+
+body.lang-urdu footer ul li a:hover {
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #aaaaaa;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.footer-contact-item i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.footer-contact-item span {
+    transition: color 0.3s ease;
+}
+
+.footer-contact-item:hover span {
+    color: var(--primary-color) !important;
+}
+
+.footer-contact-item:hover i {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: none;
+    /* Removed the decoration line */
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    line-height: 0;
+}
+
+.social-links a i {
+    margin: 0;
+    line-height: 0;
+    vertical-align: middle;
+}
+
+/* Ensure the icon itself has no offsets */
+.social-links a i::before {
+    display: block;
+    line-height: 0;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    color: #ffffff !important;
+    transform: translateY(-5px);
+}
+
+.social-links a:hover i {
+    color: #ffffff !important;
+}
+
+/* Footer Mobile Responsiveness */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .d-flex.align-items-center {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-contact-item {
+        justify-content: center;
+    }
+
+    footer h5 {
+        margin-top: 20px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+    }
 }

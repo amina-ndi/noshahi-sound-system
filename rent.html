@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.jpeg" type="image/jpeg">
     <title>Rent It Now - Noshahi Sound System</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,23 +21,38 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">NOSHAHI SOUND</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="img/logo.jpeg" alt="Noshahi Sound System" class="navbar-logo me-2">
+                <span>Noshahi</span> Sound System
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sound-setup.html">Sound Setup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
                     <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item">
                         <button id="sound-toggle" class="btn btn-link nav-link" title="Toggle Sound">
                             <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="lang-toggle" title="Switch Language">
+                            <i class="fas fa-globe lang-icon"></i>
+                            <span class="lang-label">اردو</span>
                         </button>
                     </li>
                     <li class="nav-item ms-lg-3"><a class="btn btn-cta" href="rent.html">Rent It Now</a></li>
@@ -46,10 +62,10 @@
     </nav>
 
     <!-- Header -->
-    <section class="page-hero">
+    <section class="page-hero hero-rent">
         <div class="container">
             <h1 class="display-4 fw-bold">Rent <span>It Now</span></h1>
-            <p class="lead">Book premium audio equipment for your event instantly.</p>
+            <p class="lead animate-fade-up delay-200">Book premium audio Sound Setup for your event instantly.</p>
         </div>
     </section>
 
@@ -95,7 +111,7 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <label class="form-label text-muted small fw-bold">Equipment Needed
+                                    <label class="form-label text-muted small fw-bold">Sound Setup Needed
                                         (Optional)</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="pa_system" id="checkPA">
@@ -135,23 +151,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold text-white mb-4">NOSHAHI SOUND</h5>
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="img/logo.jpeg" alt="Noshahi Sound System" class="footer-logo-brand me-3">
+                        <h5 class="fw-bold text-white mb-0 text-nowrap">Noshahi Sound System</h5>
+                    </div>
                     <p class="text-secondary small">Your trusted partner for professional audio and lighting solutions
-                        in Gojra and beyond.</p>
+                        in Gojra and beyond. Crystal clear sound for every occasion.</p>
+                    <div class="social-links mt-4">
+                        <a href="https://facebook.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/noshahisoundsystem" target="_blank" class="me-3"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/noshahisound" target="_blank" class="me-3"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/923281642297" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                    <h5>Quick Links</h5>
+                    <h5 class="fw-bold text-white mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="sound-setup.html">Sound Setup</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="showcase.html">Showcase</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                    <h5>Services</h5>
+                    <h5 class="fw-bold text-white mb-4">Services</h5>
                     <ul class="list-unstyled">
                         <li><a href="rent.html">Sound Rental</a></li>
                         <li><a href="events.html">Lighting Setup</a></li>
@@ -160,23 +188,30 @@
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <h5>Contact Us</h5>
-                    <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Village 97 JB, Gojra</li>
-                        <li class="mb-2"><i class="fas fa-phone me-2"></i> 0328-1642297 (Adeel Noshahi)</li>
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@noshahisound.com</li>
-                    </ul>
+                    <h5 class="fw-bold text-white mb-4">Contact Us</h5>
+                    <a href="https://www.google.com/maps/search/97+JB+Gojra" target="_blank"
+                        class="footer-contact-item mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="text-secondary small">Village 97 JB, Gojra</span>
+                    </a>
+                    <a href="tel:+923281642297" class="footer-contact-item mb-3">
+                        <i class="fas fa-phone"></i>
+                        <span class="text-secondary small">0328-1642297 (Adeel Noshahi)</span>
+                    </a>
+                    <a href="mailto:info@noshahisound.com" class="footer-contact-item mb-3">
+                        <i class="fas fa-envelope"></i>
+                        <span class="text-secondary small">info@noshahisound.com</span>
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom mt-5 pt-4 ">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start">
-                        <p class="mb-0 small">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
+                        <p class="mb-0 small text-secondary">&copy; 2026 Noshahi Sound System. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                        <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                        <p class="mb-0 small text-secondary">Designed with <i class="fas fa-heart text-danger"></i> in
+                            Gojra</p>
                     </div>
                 </div>
             </div>
@@ -191,6 +226,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="translations.js"></script>
 </body>
 
 </html>
