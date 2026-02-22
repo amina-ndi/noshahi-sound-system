@@ -592,6 +592,16 @@ const translations = {
     "AUX connectivity for your playlist": "آپ کی پلے لسٹ کے لیے AUX کنیکٹیویٹی",
 
     "Get Together Package": "گیٹ ٹوگیدر پیکج",
+    "Our Recent Event Gallery": "ہماری حالیہ ایونٹ گیلری",
+    "A glimpse into the magical moments we've created": "ہمارے تخلیق کردہ جادوئی لمحات کی ایک جھلک",
+    "Qawwali Night": "قوالی نائٹ",
+    "Sufi Musical Evening": "صوفیانہ موسیقی کی شام",
+    "Grand Royal Reception": "شاندار شاہی استقبالیہ",
+    "Spiritual": "روحانی",
+    "Sacred Mehfil-e-Naat": "مقدس محفلِ نعت",
+    "Vibrant Birthday Celebration": "سالگرہ کی بھرپور تقریب",
+    "Outdoor Tournament Sound": "آؤٹ ڈور ٹورنامنٹ ساؤنڈ",
+    "Business Conference Setup": "تجارتی کانفرنس سیٹ اپ",
     "Compact Crystal Clear Speakers": "کمپیکٹ کرسٹل کلیئر اسپیکرز",
     "Background Music Playback": "بیک گراؤنڈ میوزک پلے بیک",
     "2x Vocal Microphones for announcements": "اعلانات کے لیے 2x ووکل مائیکروفونز",
@@ -691,6 +701,46 @@ const translations = {
     "Moving Head Light": "موونگ ہیڈ لائٹ",
     "Intelligent DMX controllable RGBW light": "ذہین DMX کنٹرول ایبل RGBW لائٹ",
     "* Prices may vary based on event location and duration. Delivery charges may apply for long distances.": "* قیمتیں ایونٹ کے مقام اور دورانیہ کی بنیاد پر بدل سکتی ہیں۔ دور دراز مقامات کے لیے ڈیلیوری چارجز لاگو ہو سکتے ہیں۔",
+    "Equipment Details": "سامان کی تفصیلات",
+    "Key Features:": "اہم خصوصیات:",
+    "Daily Rental Rate": "روزانہ کرایہ کی شرح",
+    "8-Channel Analog Mixer with EQ": "ای کیو کے ساتھ 8 چینل اینالاگ مکسر",
+    "XLR and TRS Inputs": "ایکس ایل آر اور ٹی آر ایس ان پٹس",
+    "Peak and Signal Indicators": "پیک اور سگنل انڈیکیٹرز",
+    "Dual 15-inch Active Speakers": "دو عدد 15 انچ ایکٹو اسپیکرز",
+    "High-Frequency Compression Drivers": "ہائی فریکوئنسی کمپریشن ڈرائیورز",
+    "integrated Dual-Angle Pole Socket": "انٹیگریٹڈ ڈوئل اینگل پول ساکٹ",
+    "Tough cabinet for road-ready use": "سفر میں استعمال کے لیے مضبوط کیبنٹ",
+    "High-output clean power": "اعلیٰ معیار کی شفاف پاور",
+    "2-Channel operation with bridge mode": "برج موڈ کے ساتھ 2 چینل آپریشن",
+    "Short circuit & Thermal protection": "شارٹ سرکٹ اور تھرمل پروٹیکشن",
+    "Low-noise cooling fans": "کم شور والے کولنگ فینز",
+    "Universal Rack-mount design": "یونیورسل ریک ماؤنٹ ڈیزائن",
+    "Full Digital Signal Processing": "مکمل ڈیجیٹل سگنل پروسیسنگ",
+    "Recallable Midas/Behringer Preamps": "ریکال ایبل مائیک پری ایمپس",
+    "Built-in FX rack with 4-8 slots": "4-8 سلاٹس والا بلٹ ان ایف ایکس ریک",
+    "Remote Control via Tablet/iPad": "ٹیبلٹ/آئی پیڈ کے ذریعے ریموٹ کنٹرول",
+    "Multi-track USB Recording": "ملٹی ٹریک یو ایس بی ریکارڈنگ",
+    "Pair of Dual UHF Handheld Mics": "ڈوئل یو ایچ ایف ہینڈ ہیلڈ مائیکس کا جوڑا",
+    "Long range interference-free (50m+)": "طویل فاصلے تک شفاف آواز (50 میٹر سے زائد)",
+    "Automatic frequency sync": "خودکار فریکوئنسی سنک",
+    "LCD display on mics & receiver": "مائیکس اور ریسیور پر ایل سی ڈی ڈسپلے",
+    "Premium vocal clarity": "اعلیٰ ترین ووکل کوالٹی",
+    "360-degree Pan / 180-degree Tilt": "360 ڈگری گھومنے کی صلاحیت",
+    "RGBW Master Color Mixing": "آر جی بی ڈبلیو ماسٹر کلر مکسنگ",
+    "7 Gobos + Open Spot": "7 گوبوز اور اوپن اسپاٹ",
+    "Strobe & Dimmer effects": "اسٹروب اور ڈمر ایفیکٹس",
+    "DMX-512 & Sound Active modes": "ڈی ایم ایکس اور ساؤنڈ ایکٹو موڈز",
+    "Rent Now": "ابھی کرائے پر لیں",
+    "Chat with us on WhatsApp": "ہمارے ساتھ واٹس ایپ پر بات کریں",
+    "Adeel Noshahi": "عدیل نوشاہی",
+    "Shakeel Ahmad": "شکیل احمد",
+    "Shabbir Attari": "شبیر عطاری",
+    "Nabeel": "نبیل",
+    "Director / Head": "ڈائریکٹر / ہیڈ",
+    "Booking Manager": "بکنگ مینیجر",
+    "Sound Operator": "ساؤنڈ آپریٹر",
+    "A/V Technician": "اے وی ٹیکنیشن",
     "Our Event Packages": "ہمارے ایونٹ پیکجز",
     "Tailored sound solutions for every occasion with transparent pricing.": "ہر موقع کے لیے شفاف قیمتوں کے ساتھ بہترین ساؤنڈ سلوشنز۔",
 
@@ -805,14 +855,14 @@ const translations = {
         if (currentLang === 'ur') {
             // 1. Try exact match with normalized text
             if (translations[normalized]) {
-                node.textContent = translations[normalized];
+                node.textContent = translations[normalized].replace(/\?/g, '؟');
                 return;
             }
 
             // 2. Try exact match with raw trimmed text (fallback)
             const trimmed = textContent.trim();
             if (translations[trimmed]) {
-                node.textContent = translations[trimmed];
+                node.textContent = translations[trimmed].replace(/\?/g, '؟');
                 return;
             }
 
@@ -827,7 +877,9 @@ const translations = {
                 }
             }
             if (changed) {
-                node.textContent = text;
+                node.textContent = text.replace(/\?/g, '؟');
+            } else if (textContent.includes('?')) {
+                node.textContent = textContent.replace(/\?/g, '؟');
             }
         } else {
             // Restore English original
@@ -874,7 +926,13 @@ const translations = {
                         originalTexts.set(storeKey, { el, attr, val });
                     }
                     if (translations[val]) {
-                        el.setAttribute(attr, translations[val]);
+                        el.setAttribute(attr, translations[val].replace(/\?/g, '؟'));
+                    } else {
+                        // Even if not in dictionary, if we're in Urdu mode, flip the ?
+                        const currentVal = el.getAttribute(attr);
+                        if (currentVal.includes('?')) {
+                            el.setAttribute(attr, currentVal.replace(/\?/g, '؟'));
+                        }
                     }
                 } else {
                     const orig = originalTexts.get(storeKey);
@@ -896,7 +954,9 @@ const translations = {
             }
             if (currentLang === 'ur') {
                 if (translations[text]) {
-                    opt.textContent = translations[text];
+                    opt.textContent = translations[text].replace(/\?/g, '؟');
+                } else if (opt.textContent.includes('?')) {
+                    opt.textContent = opt.textContent.replace(/\?/g, '؟');
                 }
             } else {
                 const orig = originalTexts.get(opt);

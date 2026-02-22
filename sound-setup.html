@@ -158,9 +158,10 @@
                                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Conference Panels</li>
                                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Wedding Ceremonies</li>
                             </ul>
-                            <a href="pricing.html" class="btn btn-event-cta">
+                            <button class="btn btn-event-cta" data-bs-toggle="modal"
+                                data-bs-target="#inventoryDetailModal" data-inventory-type="mixer_8">
                                 <i class="fas fa-arrow-right me-2"></i>Request Quote
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -186,9 +187,10 @@
                                 <li class="mb-1"><i class="fas fa-shield-alt text-warning me-2"></i>Tour-Grade Build
                                 </li>
                             </ul>
-                            <a href="pricing.html" class="btn btn-event-cta">
+                            <button class="btn btn-event-cta" data-bs-toggle="modal"
+                                data-bs-target="#inventoryDetailModal" data-inventory-type="speakers_15">
                                 <i class="fas fa-arrow-right me-2"></i>Request Quote
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -214,9 +216,10 @@
                                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Rack-Mountable Design
                                 </li>
                             </ul>
-                            <a href="pricing.html" class="btn btn-event-cta">
+                            <button class="btn btn-event-cta" data-bs-toggle="modal"
+                                data-bs-target="#inventoryDetailModal" data-inventory-type="power_amp">
                                 <i class="fas fa-arrow-right me-2"></i>Request Quote
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -243,9 +246,10 @@
                                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Wireless Tablet Control
                                 </li>
                             </ul>
-                            <a href="pricing.html" class="btn btn-event-cta">
+                            <button class="btn btn-event-cta" data-bs-toggle="modal"
+                                data-bs-target="#inventoryDetailModal" data-inventory-type="digital_mixer">
                                 <i class="fas fa-arrow-right me-2"></i>Request Quote
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -271,9 +275,10 @@
                                     Technology</li>
                                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Long Battery Life</li>
                             </ul>
-                            <a href="pricing.html" class="btn btn-event-cta">
+                            <button class="btn btn-event-cta" data-bs-toggle="modal"
+                                data-bs-target="#inventoryDetailModal" data-inventory-type="microphones">
                                 <i class="fas fa-arrow-right me-2"></i>Request Quote
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -298,9 +303,10 @@
                                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Sound-Activated Modes
                                 </li>
                             </ul>
-                            <a href="pricing.html" class="btn btn-event-cta">
+                            <button class="btn btn-event-cta" data-bs-toggle="modal"
+                                data-bs-target="#inventoryDetailModal" data-inventory-type="lighting">
                                 <i class="fas fa-arrow-right me-2"></i>Request Quote
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -331,7 +337,8 @@
                                 class="fab fa-instagram"></i></a>
                         <a href="https://twitter.com/noshahisound" target="_blank" class="me-3"><i
                                 class="fab fa-twitter"></i></a>
-                        <a href="https://wa.me/923281642297" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@noshahisoundsystem" target="_blank"><i
+                                class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
@@ -363,7 +370,15 @@
                     </a>
                     <a href="tel:+923281642297" class="footer-contact-item mb-3">
                         <i class="fas fa-phone"></i>
-                        <span class="text-secondary small">0328-1642297 (Adeel Noshahi)</span>
+                        <span class="text-secondary small">0328-1642297 (Adeel)</span>
+                    </a>
+                    <a href="tel:+923027689195" class="footer-contact-item mb-3">
+                        <i class="fas fa-phone"></i>
+                        <span class="text-secondary small">0302-7689195 (Shakeel)</span>
+                    </a>
+                    <a href="tel:+923291194726" class="footer-contact-item mb-3">
+                        <i class="fas fa-phone"></i>
+                        <span class="text-secondary small">0329-1194726 (Shabbir)</span>
                     </a>
                     <a href="mailto:info@noshahisound.com" class="footer-contact-item mb-3">
                         <i class="fas fa-envelope"></i>
@@ -385,8 +400,28 @@
         </div>
     </footer>
 
+    <!-- Inventory Details Modal -->
+    <div class="modal fade" id="inventoryDetailModal" tabindex="-1" aria-labelledby="inventoryDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title fw-bold" id="inventoryDetailModalLabel">Equipment Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="inventoryDetailModalBody">
+                    <!-- Dynamic Content -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="rent.html" class="btn btn-primary">Rent Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/923281642297" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <a href="#" class="whatsapp-float" title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 

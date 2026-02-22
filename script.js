@@ -246,6 +246,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 html += '</ul>';
                 modalBody.innerHTML = html;
 
+                // Update "Book Now" link in modal footer with event type
+                const bookNowBtn = eventModal.querySelector('.modal-footer .btn-primary');
+                if (bookNowBtn) {
+                    bookNowBtn.href = `rent.html?event=${type}`;
+                }
+
                 // Re-run translation for dynamic content
                 if (window.noshahi && window.noshahi.translatePage) {
                     window.noshahi.translatePage();
@@ -292,7 +298,77 @@ const fleetDetails = {
     }
 };
 
-// Fleet Modal Logic
+// Inventory Details Data (Sound Setup Page)
+const inventoryDetails = {
+    mixer_8: {
+        title: "8 Channel Sound System",
+        price: "Rs. 2,500",
+        features: [
+            "8-Channel Analog Mixer with EQ",
+            "Effects Processing (Reverb/Delay)",
+            "Phantom Power for Condenser Mics",
+            "XLR and TRS Inputs",
+            "Peak and Signal Indicators"
+        ]
+    },
+    speakers_15: {
+        title: "2 x 15 Inch DJ Speakers",
+        price: "Rs. 4,000",
+        features: [
+            "Dual 15-inch Active Speakers",
+            "1000W Peak Power each",
+            "High-Frequency Compression Drivers",
+            "Integrated Dual-Angle Pole Socket",
+            "Tough cabinet for road-ready use"
+        ]
+    },
+    power_amp: {
+        title: "Professional Power Amplifiers",
+        price: "Rs. 3,000",
+        features: [
+            "High-output clean power",
+            "2-Channel operation with bridge mode",
+            "Short circuit & Thermal protection",
+            "Low-noise cooling fans",
+            "Universal Rack-mount design"
+        ]
+    },
+    digital_mixer: {
+        title: "Advanced Digital Mixers",
+        price: "Rs. 5,000",
+        features: [
+            "Full Digital Signal Processing",
+            "Recallable Midas/Behringer Preamps",
+            "Built-in FX rack with 4-8 slots",
+            "Remote Control via Tablet/iPad",
+            "Multi-track USB Recording"
+        ]
+    },
+    microphones: {
+        title: "Professional Wireless Microphones",
+        price: "Rs. 1,500",
+        features: [
+            "Pair of Dual UHF Handheld Mics",
+            "Long range interference-free (50m+)",
+            "Automatic frequency sync",
+            "LCD display on mics & receiver",
+            "Premium vocal clarity"
+        ]
+    },
+    lighting: {
+        title: "Intelligent Moving Head Lights",
+        price: "Rs. 2,000",
+        features: [
+            "360-degree Pan / 180-degree Tilt",
+            "RGBW Master Color Mixing",
+            "7 Gobos + Open Spot",
+            "Strobe & Dimmer effects",
+            "DMX-512 & Sound Active modes"
+        ]
+    }
+};
+
+// Fleet Modal Logic (Home Page)
 document.addEventListener('DOMContentLoaded', () => {
     const fleetModal = document.getElementById('fleetDetailModal');
     if (fleetModal) {
@@ -321,3 +397,129 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Inventory Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const inventoryModal = document.getElementById('inventoryDetailModal');
+    if (inventoryModal) {
+        inventoryModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const type = button.getAttribute('data-inventory-type');
+            const data = inventoryDetails[type];
+
+            const modalTitle = inventoryModal.querySelector('.modal-title');
+            const modalBody = inventoryModal.querySelector('.modal-body');
+
+            if (data) {
+                modalTitle.textContent = data.title;
+                let html = `<div class="mb-4 text-center">
+                                <span class="h3 fw-bold text-danger">${data.price}</span>
+                                <p class="text-muted small">Daily Rental Rate</p>
+                            </div>
+                            <h6 class="fw-bold mb-3">Key Features:</h6>
+                            <ul class="list-group list-group-flush mb-3">`;
+                data.features.forEach(feature => {
+                    html += `<li class="list-group-item"><i class="fas fa-check-circle text-danger me-2"></i>${feature}</li>`;
+                });
+                html += '</ul>';
+                modalBody.innerHTML = html;
+
+                // Update "Rent Now" link 
+                const rentNowBtn = inventoryModal.querySelector('.modal-footer .btn-primary');
+                if (rentNowBtn) {
+                    rentNowBtn.href = `rent.html?event=other&details=${encodeURIComponent('Rental for ' + data.title)}`;
+                }
+
+                // Re-run translation for dynamic content
+                if (window.noshahi && window.noshahi.translatePage) {
+                    window.noshahi.translatePage();
+                }
+            }
+        });
+    }
+});
+
+// Auto-select event type from URL parameter
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventTypeParam = urlParams.get('event');
+
+    if (eventTypeParam) {
+        const eventSelect = document.getElementById('eventType');
+        if (eventSelect) {
+            // Mapping short types to select values if they differ
+            const typeMapping = {
+                'wedding': 'wedding',
+                'walima': 'wedding',
+                'birthday': 'birthday',
+                'gettogether': 'get_together',
+                'naat': 'naat',
+                'corporate': 'corporate',
+                'school': 'other', // fallback if not specifically listed
+                'qawwali': 'other', // fallback
+                'sports': 'other'
+            };
+
+            const valueToSelect = typeMapping[eventTypeParam] || eventTypeParam;
+
+            // Wait a tiny bit for translation engine to potentially settle
+            setTimeout(() => {
+                eventSelect.value = valueToSelect;
+            }, 100);
+        }
+    }
+});
+
+// WhatsApp Menu Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    if (!whatsappBtn) return;
+
+    // Create Menu
+    const whatsappMenu = document.createElement('div');
+    whatsappMenu.className = 'whatsapp-menu';
+    whatsappMenu.id = 'whatsappMenu';
+    whatsappMenu.innerHTML = `
+        <h6 class="mb-3">Chat with us on WhatsApp</h6>
+        <a href="https://wa.me/923281642297" target="_blank" class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div class="contact-info">
+                <span class="name">Adeel Noshahi</span>
+                <span class="role">Director / Head</span>
+            </div>
+        </a>
+        <a href="https://wa.me/923027689195" target="_blank" class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div class="contact-info">
+                <span class="name">Shakeel Ahmad</span>
+                <span class="role">Booking Manager</span>
+            </div>
+        </a>
+        <a href="https://wa.me/923291194726" target="_blank" class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div class="contact-info">
+                <span class="name">Shabbir Attari</span>
+                <span class="role">Sound Operator</span>
+            </div>
+        </a>
+    `;
+    document.body.appendChild(whatsappMenu);
+
+    whatsappBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        whatsappMenu.classList.toggle('show');
+
+        // Translate menu content if in Urdu
+        if (window.noshahi && window.noshahi.translatePage) {
+            window.noshahi.translatePage();
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!whatsappBtn.contains(e.target) && !whatsappMenu.contains(e.target)) {
+            whatsappMenu.classList.remove('show');
+        }
+    });
+});
+

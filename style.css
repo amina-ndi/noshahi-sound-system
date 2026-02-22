@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/noormuhammad/urdu-fonts/JameelNooriKasheeda.css');
+@import url('https://cdn.jsdelivr.net/gh/noormuhammad/urdu-fonts/JameelNooriNastaleeq.css');
 
 :root {
     --primary-color: #FF0051;
@@ -21,11 +23,13 @@ body {
 }
 
 /* Global Urdu Font Application */
+/* Global Urdu Font Application - Premium Nastaleeq Style */
 body.lang-urdu,
 body.lang-urdu *:not(i):not([class*="fa-"]) {
-    font-family: 'Jameel Noori Kasheeda', serif !important;
-    font-weight: 500 !important;
-    letter-spacing: 1px !important;
+    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Jameel Noori Kasheeda', serif !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    word-spacing: 2px;
 }
 
 /* Ensure English text in buttons/labels doesn't use the Urdu font */
@@ -62,8 +66,18 @@ body.lang-urdu h2,
 body.lang-urdu h3,
 body.lang-urdu h4,
 body.lang-urdu h5,
-body.lang-urdu h6 {
-    line-height: 2.2 !important;
+body.lang-urdu h6,
+body.lang-urdu span:not(.en-text) {
+    line-height: 2.4 !important;
+    color: #2c3e50;
+    /* Professional Slate Blue/Grey from the image */
+}
+
+body.lang-urdu h1,
+body.lang-urdu h2 {
+    font-weight: 700 !important;
+    font-size: 110%;
+    /* Slightly boost headings for Urdu readability */
 }
 
 /* Fix for buttons and nav links in Urdu mode to prevent them from being too large */
@@ -721,6 +735,94 @@ footer a:hover {
     animation: none;
 }
 
+/* WhatsApp Contact Menu */
+.whatsapp-menu {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    padding: 20px;
+    z-index: 1001;
+    display: none;
+    animation: slideUp 0.3s ease-out;
+}
+
+.whatsapp-menu.show {
+    display: block;
+}
+
+.whatsapp-menu h6 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 10px;
+    transition: background 0.2s;
+    margin-bottom: 8px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item:hover {
+    background: #f8f9fa;
+    color: #25d366;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #25d366;
+}
+
+.contact-info .name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.contact-info .role {
+    display: block;
+    font-size: 0.75rem;
+    color: #777;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.lang-urdu .whatsapp-menu {
+    right: auto;
+    left: 30px;
+    text-align: right;
+}
+
+body.lang-urdu .contact-item i {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
 @keyframes whatsapp-vibrate {
 
     0%,
@@ -854,6 +956,98 @@ footer a:hover {
     object-fit: cover;
 }
 
+/* Showcase Gallery Section */
+.showcase-gallery-section {
+    background-color: #ffffff;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 350px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-card img,
+.gallery-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img,
+.gallery-card:hover video {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.gallery-title {
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.gallery-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 0, 81, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.gallery-card:hover .gallery-play-icon {
+    background: var(--primary-color);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+body.lang-urdu .gallery-overlay {
+    text-align: right;
+}
+
+body.lang-urdu .gallery-category {
+    letter-spacing: 0;
+}
+
 .video-overlay {
     position: absolute;
     top: 0;
@@ -924,7 +1118,7 @@ footer a:hover {
 
 .stat-icon {
     font-size: 3rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
@@ -937,7 +1131,7 @@ footer a:hover {
 
 .stat-label {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
     margin: 0;
     font-weight: 600;
 }
@@ -1332,11 +1526,12 @@ footer a:hover {
 
 /* Event Card Title */
 .event-card-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 12px;
     position: relative;
-    padding-bottom: 12px;
+    padding-bottom: 15px;
 }
 
 .event-card-title::after {
@@ -1345,35 +1540,120 @@ footer a:hover {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
+    width: 40px;
     height: 3px;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.event-card:hover .event-card-title::after {
+    width: 60px;
+}
+
+/* Why Choose Us Card Specific Styles */
+.why-card {
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    background: #fff;
+}
+
+.why-card:hover {
+    border: 1px solid var(--primary-color) !important;
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Rental Fleet Card Specific Styles - PRO AUDIO LOOK */
+.fleet-card {
+    background: #ffffff;
+    border: 1px solid rgba(255, 0, 81, 0.1) !important;
+    position: relative;
+}
+
+.fleet-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 0, 81, 0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.fleet-card:hover::before {
+    opacity: 1;
+}
+
+.fleet-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(255, 0, 81, 0.15), 0 0 20px rgba(255, 0, 81, 0.1);
+    border: 1px solid var(--primary-color) !important;
+}
+
+.fleet-card .event-card-img-wrapper {
+    background: #000;
+}
+
+.fleet-card .event-card-img-wrapper img {
+    opacity: 0.9;
+    filter: brightness(1.1);
+}
+
+.fleet-card:hover .event-card-img-wrapper img {
+    opacity: 1;
+    filter: brightness(1.2) contrast(1.1);
+}
+
+.fleet-card .card-body {
+    background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+}
+
+.fleet-card .list-unstyled li {
+    font-size: 0.9rem;
+    color: #555;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+}
+
+.fleet-card .list-unstyled li:last-child {
+    border-bottom: none;
+}
+
+.fleet-card .list-unstyled li i {
+    color: var(--primary-color) !important;
+    font-size: 0.8rem;
 }
 
 /* Event CTA Button */
 .btn-event-cta {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: #fff;
+    color: #fff !important;
     border: none;
-    padding: 10px 28px;
+    padding: 12px 28px;
     border-radius: 30px;
     font-weight: 600;
     font-size: 0.9rem;
     letter-spacing: 0.3px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 0, 81, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
 }
 
 .btn-event-cta:hover {
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    color: #fff;
+    color: #fff !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(255, 0, 81, 0.45);
 }
 
 .btn-event-cta i {
     transition: transform 0.3s ease;
+    margin-left: 8px;
 }
 
 .btn-event-cta:hover i {
@@ -1383,11 +1663,11 @@ footer a:hover {
 /* Responsive adjustments for event cards */
 @media (max-width: 575px) {
     .event-card-img-wrapper {
-        height: 180px;
+        height: 195px;
     }
 
     .event-card-title {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -1911,15 +2191,7 @@ body.lang-urdu .navbar-logo {
     }
 }
 
-/* Event Type Cards Expansion */
-.event-card {
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 3px solid var(--primary-color) !important;
-    /* Thick border */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
+/* Event Type Cards Expansion removed - handled in main block */
 
 /* ── Pricing Page Enhancements ──────────────── */
 .pricing-card {
@@ -2229,6 +2501,14 @@ body.lang-urdu .testimonial-text {
     line-height: 2;
 }
 
+/* Urdu Stats Section White Text */
+body.lang-urdu .stats-section,
+body.lang-urdu .stat-number,
+body.lang-urdu .stat-label,
+body.lang-urdu .stat-icon {
+    color: #ffffff !important;
+}
+
 /* ── Professional Footer Redesign ──────────────── */
 footer {
     background-color: #0d0d0d;
@@ -2298,7 +2578,7 @@ a {
 }
 
 .footer-contact-item i {
-    color: var(--primary-color);
+    color: #ffffff;
     font-size: 1.1rem;
     transition: all 0.3s ease;
     flex-shrink: 0;
@@ -2314,6 +2594,7 @@ a {
 }
 
 .footer-contact-item:hover i {
+    color: var(--primary-color);
     transform: scale(1.1);
 }
 
@@ -2356,13 +2637,13 @@ a {
 }
 
 .social-links a:hover {
-    background: var(--primary-color);
-    color: #ffffff !important;
+    background: #ffffff;
+    color: var(--primary-color) !important;
     transform: translateY(-5px);
 }
 
 .social-links a:hover i {
-    color: #ffffff !important;
+    color: var(--primary-color) !important;
 }
 
 /* Footer Mobile Responsiveness */
