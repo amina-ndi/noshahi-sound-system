@@ -2677,3 +2677,32 @@ a {
         margin-top: 40px;
     }
 }
+
+/* ── Global Button & Branding Overrides ──────────────── */
+/* Ensure ALL buttons use red on hover and remove any blue remnants */
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-cta:hover,
+.btn-event-cta:hover,
+.btn-rent-primary:hover,
+.btn-rent-outline:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    background-image: none !important;
+    /* Remove any gradient if needed */
+    color: #fff !important;
+    box-shadow: 0 8px 25px rgba(255, 0, 81, 0.4) !important;
+}
+
+/* Fix for corporate badges that were blue - changing to professional red theme */
+.event-card-badge.badge-corporate {
+    background: linear-gradient(135deg, #cc0040, #990033) !important;
+    box-shadow: 0 4px 15px rgba(204, 0, 64, 0.4) !important;
+}
+
+/* Fix for academic badges that were purple - align with branding */
+.event-card-badge.badge-academic {
+    background: linear-gradient(135deg, #a30036, #7a0029) !important;
+    box-shadow: 0 4px 15px rgba(163, 0, 54, 0.4) !important;
+}

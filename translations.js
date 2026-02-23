@@ -176,7 +176,7 @@ const translations = {
     // ── About Page — Leadership Team ───────────────────
     "Leadership Team": "قائدین ٹیم",
     "Meet the people behind the sound.": "آواز کے پیچھے موجود لوگوں سے ملیں۔",
-    "Adeel Noshahi": "عدیل نوشاہی",
+    "Muhammad Adeel Noshahi": "محمد عدیل نوشاہی",
     "Director / Head": "ڈائریکٹر / سربراہ",
     "Leading the vision of Noshahi Sound with a focus on innovation and customer satisfaction.":
         "جدت اور کسٹمر کی اطمینان پر توجہ دیتے ہوئے نوشاہی ساؤنڈ کی قیادت۔",
@@ -184,7 +184,7 @@ const translations = {
     "Booking Manager": "بکنگ مینیجر",
     "Ensuring smooth scheduling and client coordination for all our engagements.":
         "ہمارے تمام ایونٹس کے لیے ہموار شیڈولنگ اور کلائنٹ ہم آہنگی کو یقینی بنانا۔",
-    "Shabbir Attari": "شبیر عطاری",
+    "Muhammad Shabbir Attari": "محمد شبیر عطاری",
     "Sound Operator": "ساؤنڈ آپریٹر",
     "Technical expert responsible for on-site audio mixing and system optimization.":
         "آن سائٹ آڈیو مکسنگ اور سسٹم کی بہتری کے ذمہ دار تکنیکی ماہر۔",
@@ -734,7 +734,9 @@ const translations = {
     "Rent Now": "ابھی کرائے پر لیں",
     "Chat with us on WhatsApp": "ہمارے ساتھ واٹس ایپ پر بات کریں",
     "Adeel Noshahi": "عدیل نوشاہی",
-    "Shakeel Ahmad": "شکیل احمد",
+    "Muhammad Adeel Noshahi": "محمد عدیل نوشاہی",
+    "Shakeel Ahmad Qadri": "شکیل احمد قادری",
+    "Muhammad Shabbir Attari": "محمد شبیر عطاری",
     "Shabbir Attari": "شبیر عطاری",
     "Nabeel": "نبیل",
     "Director / Head": "ڈائریکٹر / ہیڈ",
