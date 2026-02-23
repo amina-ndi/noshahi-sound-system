@@ -159,7 +159,7 @@ const translations = {
     "Story": "کہانی",
     "Dedicated to sonic excellence since our inception. We combine years of experience with cutting-edge Sound Setup to deliver unforgettable audio experiences.":
         "اپنے آغاز سے ہی آواز کی عمدگی کے لیے وقف۔ ہم برسوں کے تجربے کو جدید ترین سامان کے ساتھ ملا کر ناقابل فراموش آڈیو تجربات فراہم کرتے ہیں۔",
-    "Get in Touch": "رابطہ کریں",
+    "Get in Touch": "ہم سے رابطہ کریں",
 
     // ── About Page — Mission & Values ──────────────────
     "Mission & Values": "مشن اور اقدار",
@@ -284,8 +284,8 @@ const translations = {
     "Get a Custom Quote": "کسٹم قیمت معلوم کریں",
 
     // ── Contact Page — Hero ────────────────────────────
-    "Get": "رابطہ",
-    "in Touch": "کریں",
+    "Get": "ہم سے",
+    "in Touch": "رابطہ کریں",
     "We're here to answer your questions and plan your event. Contact us today for a free consultation and quote for your next event.":
         "ہم آپ کے سوالات کا جواب دینے اور آپ کے ایونٹ کی منصوبہ بندی کے لیے حاضر ہیں۔ اپنے اگلے ایونٹ کے لیے مفت مشاورت اور قیمت کے لیے آج ہم سے رابطہ کریں۔",
     "Call Us Now": "ابھی کال کریں",
