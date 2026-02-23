@@ -318,7 +318,7 @@ const translations = {
     "0328-1642297 (Adeel Noshahi)": "0328-1642297 (عدیل نوشاہی)",
     "0302-7689195 (Booking Manager)": "0302-7689195 (بکنگ مینیجر)",
     "Email Us": "ای میل کریں",
-    "info@noshahisound.com": "info@noshahisound.com",
+    "info@noshahisound.com": "adeel.noshahidevelopersinc@gmail.com",
     "Office Hours": "دفتر کے اوقات",
     "Monday - Friday:": "پیر - جمعہ:",
     "9:00 AM - 6:00 PM": "صبح 9:00 - شام 6:00",
