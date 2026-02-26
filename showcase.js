@@ -31,6 +31,34 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Video Gallery Modal Logic
+    const videoGalleryItems = document.querySelectorAll('.video-gallery-item');
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalVideoSource = modalVideo ? modalVideo.querySelector('source') : null;
+
+    if (videoGalleryItems.length > 0 && videoModal && modalVideo && modalVideoSource) {
+        videoGalleryItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const videoSrc = this.getAttribute('data-video-src');
+                if (videoSrc) {
+                    modalVideoSource.src = videoSrc;
+                    modalVideo.load();
+                    const bsModal = new bootstrap.Modal(videoModal);
+                    bsModal.show();
+                    modalVideo.play();
+                }
+            });
+        });
+
+        // Pause video when modal is closed
+        videoModal.addEventListener('hidden.bs.modal', function () {
+            modalVideo.pause();
+            modalVideo.currentTime = 0;
+            modalVideoSource.src = '';
+        });
+    }
+
     // Animated Counter for Stats
     const animateCounters = () => {
         const counters = document.querySelectorAll('.stat-number');

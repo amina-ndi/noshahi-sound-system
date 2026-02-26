@@ -2245,6 +2245,9 @@ body.lang-urdu .card-inactive::after {
 
 .pricing-card .card-body {
     padding: 3rem 2rem !important;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .pricing-card .price-value {
@@ -2292,6 +2295,7 @@ body.lang-urdu .pricing-card .feature-list-item i {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    margin-top: auto;
 }
 
 .pricing-card .btn-rent-primary {
